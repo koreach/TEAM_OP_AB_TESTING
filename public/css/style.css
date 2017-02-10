@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #fa4748;
 }
 
 li {
@@ -21,21 +21,42 @@ li a {
 }
 
 li a:hover {
-    background-color: red;
+    background-color: #d50a0a;
 }
 
 .title {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 10vw;
+	font-size: 9vw;
     text-align: center;
+    color: white;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+    background-color: #d50a0a;
+    margin: 0; !important
+    padding: 0; !important
 }
 
 .picture {
     max-width: 100%;
     height: auto; 
     margin: 0 auto;
+    padding-top: 10px;
     position: relative;
     display:block;
+}
+.img-layout {
+    clear: both;
+}
+.prof-pic {
+    float: left;
+    margin-right: 7px;
+    width: 15%;
+    
+}
+
+.description {
+    display: inline;
+    font-size: 3.5vw;
+    font-style: sans-serif;
 }
