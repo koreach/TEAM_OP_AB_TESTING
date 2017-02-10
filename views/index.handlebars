@@ -2,15 +2,15 @@
 
 <html>
 <head>
-	<title>ADVENTURE YOU</title>	
+	<title>ADVENTURE YOU</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=devide-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="css/bootstrap.css"></link>
 	<link rel="stylesheet" href="css/bootstrap-theme.css"></link>
 	<link rel="stylesheet" href="css/style.css"></link>
-	
-	
+
+
 </head>
 <header>
     <div id="header">
@@ -18,20 +18,20 @@
             <div class="container-fluid">
                 <div>
                 	<div class="title">
-                		ADVENTURE YOU
+                		<img class="adventureyou" src="images/ADVENTURE YOU.png">
                 	</div>
                     <div class="row">
                         <nav>
-                            <ul class="nav-left">                             
-                                <li><a href="/">A</a></li>                               
-                                <li><a href="bucket">B</a></li>
-                                <li><a href="#">C</a></li>
-                                <li><a href="#">D</a></li>      
+                            <ul class="nav-left">
+                                <li><a href="/"><img class="nav" src="images/Profile Icon.png"></a></li>
+                                <li><a href="bucket"><img class="nav" src="images/Feed Icon.png"></a></li>
+                                <li><a href="#"><img class="nav" src="images/Map Icon.png"></a></li>
+                                <li><a href="#"><img class="nav" src="images/Bucketlist Icon.png"></a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                
+
             </div>
         </nav>
     </div>
@@ -51,12 +51,12 @@
 			</div>
 			<div>
 				<div style="margin: 10px">
-					<img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
+					<img class="prof-pic" src="images/Bob Ross.png">
 				</div>
-				<p class="description"><strong>Choi Seun Sil has posted a new adventure:</strong> <br> Camping with Government Money</p>
+				<p class="description"><strong>Bob Ross has posted a new adventure:</strong> <br> Exploring La Jolla</p>
 			</div>
 			<div class="img-layout">
-				<img class="picture" src="images/night.jpg">
+				<img class="picture" src="images/Beach Image.png">
 			</div>
 		</div>
 	</div>
@@ -65,8 +65,8 @@
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/hci-friends.js"></script>
 <script src="js/bootstrap.js"></script>
-<script> 
-		$('.change a[href=#]').on('click', function(event){     
+<script>
+		$('.change a[href=#]').on('click', function(event){
     		event.preventDefault();
     		//var name = $(this).text();
     		var new_name = anagrammedName($(this).text());
@@ -75,4 +75,3 @@
     </script>
 
 </html>
-

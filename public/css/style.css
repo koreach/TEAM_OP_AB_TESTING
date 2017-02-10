@@ -16,11 +16,15 @@ li a {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    transition: -webkit-transform, -moz-transform, transform 0.3s ease;
+    padding: 14px 16px;
 }
 
 li a:hover {
+    position: relative;
+    width: 60%;
+    transform: scale(1.5);
     background-color: #d50a0a;
 }
 
@@ -39,19 +43,22 @@ li a:hover {
 
 .picture {
     max-width: 100%;
-    height: auto; 
+    height: auto;
     margin: 0 auto;
     padding-top: 10px;
     position: relative;
     display:block;
 }
+
 .img-layout {
     clear: both;
 }
+
 .prof-pic {
     float: left;
     margin-right: 7px;
     width: 15%;  
+    width: 15%;
 }
 
 
@@ -88,4 +95,27 @@ li a:hover {
     padding-right: : 0 !important;
     margin-left: : 0 !important;
     margin-right: : 0 !important;
+}
+
+.adventureyou {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 20px;
+  position: relative;
+  display:block;
+}
+
+.nav {
+  position: relative;
+  width:  20px;
+  height: 20px;
+}
+
+.bucket-loc {
+    font-family: "Arial Narrow",Arial,sans-serif;
+    font-size: 3.5vw;
 }
