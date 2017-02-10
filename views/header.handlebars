@@ -1,0 +1,99 @@
+<html>
+<header>
+    <div id="header">
+        <nav>
+            <div class="container">
+                <div class="col-md-5 col-sm-5 col-xs-3">
+                    <div class="row">
+                        <nav>
+                            <ul class="nav-left">
+                                {%- if guest -%}
+                                <!-- do nothing -->
+                                {%- else -%}
+                                <li><a href="/customer/account">My Account</a></li>
+                                {%- endif -%}
+                                <li><a href="/subscribe">SnackFever Box</a></li>
+                                <li><a href="/shop">Shop</a></li>
+                                <li><a href="/howitworks">How it works</a></li>
+                                {%- if guest -%}
+                                <li><a href="/about_us">About Us</a></li>
+                                {%- else -%}
+                                <!-- do nothing -->
+                                {%- endif -%}
+                            </ul>
+                        </nav>
+                        <div class="mobi-nav">
+                            <i class="icon-menu" id="mobi-menu-open"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6">
+                    <div class="row">
+                        <div class="logo-container" style="">
+                            <a href="/">{{ 'images/logo_bw.png' | asset_url | img_tag }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-3">
+                    <div class="row">
+                        <nav>
+                            <ul class="nav-right">
+                                <li><a href="http://blog.snackfever.com" target="_blank">Blog</a></li>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/checkout">Cart</a></li>
+                                {%- if guest -%}
+                                <li><a href="/customer/login">Login</a></li>
+                                {%- else -%}
+                                <li><a href="/customer/logout">Logout</a></li>
+                                {%- endif -%}
+                            </ul>
+                        </nav>
+                        <div class="mobi-cart">
+                            <a href="/checkout"><i class="icon-basket"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- Mobile Menu -->
+        <aside id="mobi-menu">
+            <div class="mobi-menu-container">
+                <div class="mobi-menu-close">
+                    <i class="icon-cancel" id="menu-close"></i>
+                </div>
+                <nav>
+                    <div class="mobi-menu-list">
+                        <ul class="mobi-menu-links">
+                            {%- if guest -%}
+                            <!-- do nothing -->
+                            {%- else -%}
+                            <li><a href="/customer/account">My Account</a></li>
+                            {%- endif -%}
+                            <li><a href="/subscribe">Subscribe</a></li>
+                            <li><a href="/shop">Shop</a></li>
+                            <li><a href="/howitworks">How it works</a></li>
+                            <li><a href="/about_us">About Us</a></li>
+                            <li><a href="http://blog.snackfever.com" target="_blank">Blog</a></li>
+                            <li><a href="/checkout">Cart</a></li>
+                            {%- if guest -%}
+                            <li><a href="/customer/login">Login</a></li>
+                            {%- else -%}
+                            <li><a href="/customer/logout">Logout</a></li>
+                            {%- endif -%}
+                        </ul>
+                    </div>
+                    <div class="header-social">
+                        <ul id="socials" class="nav">
+                            <li><a href="https://facebook.com/SnackFeverUS" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://instagram.com/snack.fever" target="_blank"><i class="icon-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/SnackFeverUS" target="_blank"><i class="icon-twitter-bird"></i></a></li>
+                      		<li><a href="https://www.youtube.com/SnackFever" target="_blank"><i class="icon-youtube"></i></a></li>
+                          	<li><a href="http://snpcht.me/SnackFever" target="_blank"><i class="icon-snapchat"></i></a></li>
+                      	</ul>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <!-- End Menu -->

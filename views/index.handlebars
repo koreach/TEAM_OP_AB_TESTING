@@ -1,8 +1,65 @@
+<!doctype html>
+
 <html>
 <head>
-	<title>Test Page</title>
+	<title>ADVENTURE YOU</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=devide-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/bootstrap.css"></link>
+	<link rel="stylesheet" href="css/bootstrap-theme.css"></link>
+	<link rel="stylesheet" href="css/style.css"></link>
+	
+	
 </head>
+<header>
+    <div id="header">
+        <nav>
+            <div class="container">
+                <div>
+                	<div class="title">
+                		ADVENTURE YOU
+                	</div>
+                    <div class="row">
+                        <nav>
+                            <ul class="nav-left">                             
+                                <li><a href="#">A</a></li>                               
+                                <li><a href="#">B</a></li>
+                                <li><a href="#">C</a></li>
+                                <li><a href="#">D</a></li>      
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+    </div>
+</header>
+
 <body>
-Begin here (or replace this with any static code already written).
+	<div class="container">
+		<div>
+			<div>
+			</div>
+			<div class="picture">
+				<img src="http://lorempixel.com/400/400/people">
+			</div>
+		</div>
+	</div>
 </body>
+
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/hci-friends.js"></script>
+<script src="js/bootstrap.js"></script>
+<script> 
+		$('.change a[href=#]').on('click', function(event){     
+    		event.preventDefault();
+    		//var name = $(this).text();
+    		var new_name = anagrammedName($(this).text());
+    		$(this).text(new_name);
+    	});
+    </script>
+
 </html>
+

@@ -1,0 +1,41 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: red;
+}
+
+.title {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 10vw;
+    text-align: center;
+}
+
+.picture {
+    max-width: 100%;
+    max-height: 33%;
+    left:0;
+    margin: auto;
+    display: block;
+}
