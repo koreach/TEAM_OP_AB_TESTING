@@ -51,12 +51,41 @@ li a:hover {
 .prof-pic {
     float: left;
     margin-right: 7px;
-    width: 15%;
-    
+    width: 15%;  
 }
+
 
 .description {
     display: inline;
     font-size: 3.5vw;
     font-style: sans-serif;
+}
+
+/*Bucket*/
+.left-element {
+    width: 50%;
+    float: left;
+    margin-top: 7px;
+    padding-left: 7px;
+}
+
+.right-element {
+    width: 50%;
+    float: right;
+    margin-top: 7px;
+}
+
+.left-info {
+    width: 100%;
+}
+
+.right-info {
+    width: 95%;
+}
+
+.nopadding {
+    padding-left: : 0 !important;
+    padding-right: : 0 !important;
+    margin-left: : 0 !important;
+    margin-right: : 0 !important;
 }
