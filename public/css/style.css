@@ -91,10 +91,10 @@ nav a:hover {
     width: 20%;
 }
 
-nav li:active {
+nav a:focus {
     text-decoration: none;
     color: white;
-    background-color: #77dd77;
+		    background-color: #77dd77;
 }
 /*d50a0a*/
 a:visited {
