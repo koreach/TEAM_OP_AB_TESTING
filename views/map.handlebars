@@ -4,7 +4,7 @@
 <head>
 	<title>ADVENTURE YOU</title>	
 	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="css/bootstrap.css"></link>
 	<link rel="stylesheet" href="css/bootstrap-theme.css"></link>
@@ -14,13 +14,14 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 82%;       
+       margin: 0;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
-        padding: 0;
+
       }
     </style>
 </head>
@@ -34,10 +35,10 @@
                     <div>
                         <nav>
                             <ul>
-                                <div>
-                                    <li class="active"><a href="friend"><img class="nav-icon" src="images/Profile Icon.png"></a></li>
+                                <div class="navbar-menu">
+                                    <li><a href="friend"><img class="nav-icon" src="images/Profile Icon.png"></a></li>
                                     <li><a href="/"><img class="nav-icon" src="images/Feed Icon.png"></a></li>
-                                    <li><a href="map"><img class="nav-icon" src="images/Map Icon.png"></a></li>
+                                    <li><a class="active" href="map"><img class="nav-icon" src="images/Map Icon.png"></a></li>
                                     <li><a href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a></li>
                                     <li><button class="hamburger">&#9776;</button>
                                     </li>
@@ -68,10 +69,15 @@
             </div>
         </div>
     </header>
-<section id="map"> 
-<body>
-	<div class="container" id="map"></div>
-    <script>
+ 
+<body class="container">
+    
+	<div id="map"></div>
+    
+
+</body>
+
+<script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
@@ -114,9 +120,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZpg_bVsT3SSXiLO--lZS0a_lcWwJj0Qg&callback=initMap">
     </script>
-
-</body>
-</section>
 <script src="js/main.js"></script>
 <script src="js/bootstrap.js"></script>
 

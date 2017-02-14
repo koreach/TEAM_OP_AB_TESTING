@@ -1,7 +1,5 @@
 $(document).ready(function () {
-        		  $("nav li").on("click", function () {
-        			    $(this).toggleClass("active");
-        		  });
+        		 
         	});  
         	-->  
         	
@@ -9,3 +7,4 @@ $(document).ready(function () {
         $( ".hamburger" ).click(function() {
         	$( ".menu" ).slideToggle("slow");
         });
+
