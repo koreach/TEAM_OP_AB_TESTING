@@ -109,6 +109,9 @@ nav .active {
 @media screen and (max-width: 768px) { .feed-box { margin:0 !important; padding: 0 !important } }
 .feed-info {
     padding-top: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 .prof-pic {
