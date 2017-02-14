@@ -107,9 +107,9 @@
                         		Choi Seun Sil has posted a new adventure!
                         	</p>
                         	<div>
-                        		<div class="col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
+                        		<div onclick="askToJoin()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
                         		<div class="col-md-2 col-sm-2 col-xs-2"></div>
-                        		<div class="col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
+                        		<div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
                         	</div>
                         </div>
                     </div>
@@ -125,9 +125,7 @@
         	$(this).children(".description").toggle(500);
         	$(this).children(".picture").css('opacity', function(i,o) {
         		 return parseFloat(o).toFixed(1) === '0.3' ? 1 : 0.3;
-
-        	});
-        	
+        	}); 	
         });
         function addToBucket() {
         	alert("added to bucketlist");
