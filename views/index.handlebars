@@ -68,7 +68,9 @@
                     		<div class="date">{{date}} </div>
                     	</div>
                         <div class="feed-info">
-                            <img class="prof-pic" src="{{peopleJoined}}">
+                            {{#each joinedList.peopleJoined}}
+                            <img class="prof-pic" src="{{face}}">
+                            {{/each}}
                         </div> 
                     </div>
                     <div class="img-layout">
@@ -78,7 +80,7 @@
                         		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..
                         	</p>
                         	<div>
-                        		<div onclick="askToJoin()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
+                        		<div onclick="askToJoin()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plus_icon2.png"></div>
                         		<div class="col-md-2 col-sm-2 col-xs-2"></div>
                         		<div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
                         	</div>
