@@ -14,6 +14,7 @@ var friend = require('./routes/friend');
 var map = require('./routes/map');
 var adventure = require('./routes/adventure');
 var share = require('./routes/share');
+var login = require('./routes/login');
 
 // Example route
 // var user = require('./routes/user');
@@ -47,6 +48,7 @@ app.get('/friend', friend.view);
 app.get('/map', map.view);
 app.get('/adventure', adventure.view);
 app.get('/share', share.view);
+app.get('/login', login.view);
 // Example route
 // app.get('/users', user.list);
 
