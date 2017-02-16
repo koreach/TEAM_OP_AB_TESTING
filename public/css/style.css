@@ -366,3 +366,88 @@ nav .active {
     width: 100%;
   }
 }
+
+
+/***** Log In ******/
+#login {
+  background-image: url('../images/City Lights.png');
+    width: 100%;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: initial;
+    
+}
+.login-page {
+    padding: 120px 0;
+    text-align: center;
+}
+@media screen and (max-width: 768px) { .login-page .container{ margin-top: -80px;} }
+
+
+.login-page .title h1 {
+    color: #414a59;
+    text-align: center;
+    font-size: 50px;
+    padding: 30px 0;
+}
+.login-page a:link,
+.login-page a:active,
+.login-page a:visited,
+.login-page a:focus{
+  color: #414a59;
+    text-decoration: underline;
+}
+.login-page .form-error {
+    background: #fdf0da;
+    padding: 15px 15px;
+    border: 1px dotted #eb3c2d;
+    height: 50px;
+    margin-bottom: 30px;
+}
+.login-page .form-error p {
+    color: #eb3c2d;
+    margin: 0;
+}
+.login-page-wrap {
+  border: 3px solid #414a59;
+    padding: 0px 15px 30px 15px;
+    background-color: white;
+    outline: 4px solid #fff;
+}
+.login-form {
+    margin: 30px 0;
+}
+.login-form input[type="email"] {    
+    width: 100%;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 3px;
+    height: 50px;
+    border: 2px solid #414a59;
+}
+.login-form input[type="password"] {
+    width: 100%;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 2px solid #414a59;
+    height: 50px;
+    margin: 30px 0;
+}
+.login-form .login-btn {
+    padding: 10px 0;
+    background: #414a59;
+    border-radius: 3px;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    margin: 0px 0;
+}
+.login-page a p.forgotpw {
+    color: #414a59;
+}

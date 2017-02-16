@@ -13,13 +13,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
     <style>
-        body {
-            font-family: "Open Sans", sans-serif;
-            background: url(images/lajolla_beach.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 0px 155px;
-        }
 
     </style>
     <header>
@@ -66,25 +59,46 @@
             </div>
         </div>
     </header>
-    <section id="index">
-    <body>
+    
+    <body onLoad="window.scroll(0, 150)">
+        <section id="login">
+    <div class="login-page">
         <div class="container">
-            <h1 align="center" style="color: white;">Sign In</h1>
-            <form align="center">
-                Username:<br>
-                <input type="text" name="username">
-                <br>
-                Password:<br>
-                <input type="text" name="password">
-                <br><br>
-                <input type="submit" value="Start Adventuring">
-
-
-            </form>
-            
+            <div class="col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+                <div class="login-page-wrap">
+                    <div class="title">
+                        <h1 data-barley="login_heading" data-barley-editor="simple">SIGN IN</h1>
+                        
+                        <form role="form" action="/login" method="post" accept-charset="utf-8">
+                            <p>
+                                <a href="/user/create" data-barley="login_no_account_link" data-barley-editor="linkedit">
+                                <span data-barley="login_no_account_1" data-barley-editor="simple">Create your account!</span>
+                                </a>
+                                
+                            </p>
+                            <div class="login-form">
+                                <p>
+                                    <label for="email" class="sr-only" data-barley="login_label_email" data-barley-editor="simple">Email Address</label>
+                                    <input type="email" name="email" class="form-control input-lg" placeholder="EMAIL ADDRESS">
+                                </p>
+                                <p>
+                                    <label for="password" class="sr-only" data-barley="login_label_password" data-barley-editor="simple">Password</label>
+                                    <input type="password" class="form-control input-lg" id="inputPassword" name="password" placeholder="PASSWORD">
+                                </p>
+                                <button type="submit" class="login-btn" data-barley="login_submit_btn" data-barley-editor="simple">LOG IN</button>
+                            </div>
+                        </form>
+                        <p>
+                            <a href="/user/forgot_password" data-barley="login_forgot_password" data-barley-editor="linkedit">Forgot Password?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
     </body>
-    </section>
+    
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
     
