@@ -60,29 +60,19 @@
     <body>
         <div class="container">
             <div>
+                {{#each feed_object}}
                 <div class="feed-box col-md-6 col-sm-12 col-xs-12">
                     <div>
                     	<div class="monthDateContainer">
-                    		<div class="month">DEC </div>
-                    		<div class="date">10 </div>
+                    		<div class="month">{{month}} </div>
+                    		<div class="date">{{date}} </div>
                     	</div>
                         <div class="feed-info">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
+                            <img class="prof-pic" src="{{peopleJoined}}">
                         </div> 
                     </div>
                     <div class="img-layout">
-                        <img class="picture" src="images/night.jpg">
+                        <img class="picture" src="{{feedPicture}}">
                         <div class="col-md-6 description">
                         	<p>
                         		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..
@@ -93,36 +83,9 @@
                         		<div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
                         	</div>
                         </div>
-
                     </div>
                 </div>
-                <div class="feed-box col-md-6 col-sm-12 col-xs-12">
-                    <div>
-                    	<div class="monthDateContainer">
-                    		<div class="month">DEC </div>
-                    		<div class="date">10 </div>
-                    	</div>
-                        <div class="feed-info">
-                            
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                            <img class="prof-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                        </div> 
-                    </div>
-                    <div class="img-layout">
-                        <img class="picture" src="images/night.jpg">
-                        <div class="description">
-                        	<p>
-                        		Choi Seun Sil has posted a new adventure!
-                        	</p>
-                        	<div>
-                        		<div onclick="askToJoin()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
-                        		<div class="col-md-2 col-sm-2 col-xs-2"></div>
-                        		<div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
-                        	</div>
-                        </div>
-                    </div>
-                </div>
+                {{/each}}
             </div>
         </div>
     </body>
