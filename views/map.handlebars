@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/bootstrap-theme.css"></link>
 	<link rel="stylesheet" href="css/style.css"></link>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 	<style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -90,6 +91,7 @@
           mapTypeId: 'roadmap',
           gestureHandling: 'cooperative'
         });
+
         var infoWindow = new google.maps.InfoWindow({map: map});
 
         
@@ -103,8 +105,9 @@
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('Location found.'); 
             map.setCenter(pos);
+            
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
@@ -114,6 +117,9 @@
         }
       }
 
+      
+        
+
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
@@ -121,9 +127,10 @@
                               'Error: Your browser doesn\'t support geolocation.');
       }
     </script>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZpg_bVsT3SSXiLO--lZS0a_lcWwJj0Qg&callback=initMap">
-    </script>
+    </script> 
 <script src="js/main.js"></script>
 <script src="js/bootstrap.js"></script>
 

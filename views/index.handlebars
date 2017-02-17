@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="css/style.css">
         </link>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
     </head>
     <header>
         <div id="header">
@@ -81,20 +83,23 @@
                         	</p>
                         	<div>
 
-                        		<div onclick="askToJoin()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
+                        		<div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
 
                         		<div class="col-md-2 col-sm-2 col-xs-2"></div>
-                        		<div class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
+                        		<div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
 
                         	</div>
                         </div>
                     </div>
                 </div>
                 {{/each}}
+
+
             </div>
         </div>
     </body>
     </section>
+    
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
@@ -113,9 +118,54 @@
         	}); 	
         });
         
-        
+
         function askToJoin() {
         	alert("Sent request to join");  
+        }
+
+        function addToBucket() {
+        	swal({
+                title: "Added to bucket!",
+               // text: "Here's my error message!",
+                type: "success",
+                showCancelButton: true,
+                cancelButtonText: "Look at more Adventures",
+                confirmButtonText: "Head to the bucket page",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+
+            function(isConfirm) {
+                if(isConfirm) {
+                    window.location.replace("https://a6-adventure-you.herokuapp.com/bucket");
+                }else {
+                    window.location.replace("https://a6-adventure-you.herokuapp.com/");
+                }
+
+            });
+          
+
+        }
+        function comment() {
+        	swal({
+              title: "Offer more Adventure Ideas!",
+              text: "Your idea:",
+              type: "input",
+              showCancelButton: true,
+              closeOnConfirm: false,
+              animation: "slide-from-top",
+              inputPlaceholder: "Idea"
+            },
+            function(inputValue){
+              if (inputValue === false) return false;
+              
+              if (inputValue === "") {
+                swal.showInputError("You need to write something!");
+                return false
+              }
+            swal("Nice!", "Your friend will love your input.");
+            });
+
         }
     </script>
 </html>
