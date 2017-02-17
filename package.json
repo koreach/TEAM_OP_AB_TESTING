@@ -2,24 +2,23 @@
   "name": "IntroHCI",
   "version": "0.0.1",
   "author": "Intro HCI Staff",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/IntroHCI/lab4"
   },
   "license": "MIT",
-
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "express": "3.x",
+    "express-fileupload": "0.0.7",
     "express3-handlebars": "*",
     "mongodb": "*",
     "mongoose": "*"
   },
   "engines": {
     "node": "0.10.x"
-  }  
+  }
 }

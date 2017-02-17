@@ -203,7 +203,7 @@ nav .active {
   z-index: 1;
   position: absolute;
   color: white;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: bold;
 	text-indent: 40px;
 	line-height: 3;
@@ -217,9 +217,7 @@ nav .active {
 .showmore {
 	background-color: #77dd77;
 	text-align: center;
-	text-transform: uppercase;
 	width: 98%;
-	color: white;
 	position: absolute;
 	bottom: 0px;
 }
@@ -293,17 +291,13 @@ nav .active {
 }
 
 .button {
-  font-size: 1em;
-  padding: 10px;
+  font-size: 1.5em;
   color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
 .button:hover {
-  background: #06D85F;
 }
 
 .overlay {
@@ -375,7 +369,7 @@ nav .active {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: initial;
-    
+
 }
 .login-page {
     padding: 120px 0;
@@ -417,7 +411,7 @@ nav .active {
 .login-form {
     margin: 30px 0;
 }
-.login-form input[type="email"] {    
+.login-form input[type="email"] {
     width: 100%;
     border: 0;
     padding: 10px 15px;

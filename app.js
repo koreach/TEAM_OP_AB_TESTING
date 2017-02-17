@@ -15,7 +15,12 @@ var map = require('./routes/map');
 var adventure = require('./routes/adventure');
 var share = require('./routes/share');
 var login = require('./routes/login');
+<<<<<<< HEAD
 var createlogin = require('./routes/createlogin');
+=======
+var add = require('./routes/add');
+
+>>>>>>> 6156542f051a548437f5b76aee29fd591d0e15bc
 
 // Example route
 // var user = require('./routes/user');
@@ -50,7 +55,11 @@ app.get('/map', map.view);
 app.get('/adventure', adventure.view);
 app.get('/share', share.view);
 app.get('/login', login.view);
+<<<<<<< HEAD
 app.get('/createlogin', createlogin.view);
+=======
+app.get('/add', add.addAdventure);
+>>>>>>> 6156542f051a548437f5b76aee29fd591d0e15bc
 
 // Example route
 // app.get('/users', user.list);
