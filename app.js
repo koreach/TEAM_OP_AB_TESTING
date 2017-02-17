@@ -16,8 +16,11 @@ var map = require('./routes/map');
 var adventure = require('./routes/adventure');
 var share = require('./routes/share');
 var login = require('./routes/login');
+
+var createlogin = require('./routes/createlogin');
 var add = require('./routes/add');
 
+<<<<<<< HEAD
 var app = express();
 var storage = multer.diskStorage({
   destination: function (req, file, callback) {
@@ -27,6 +30,7 @@ var storage = multer.diskStorage({
     cb(null, file.fieldname + '-' + file.originalname)
   }});
 var upload = multer({storage :storage}).single('userPhoto');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -58,6 +62,7 @@ app.get('/map', map.view);
 app.get('/adventure', adventure.view);
 app.get('/share', share.view);
 app.get('/login', login.view);
+app.get('/createlogin', createlogin.view);
 app.get('/add', add.addAdventure);
 app.get('/',function(req,res){
   res.sendFile(__dirname + "bucket");
@@ -72,6 +77,7 @@ app.post('bucket',function(req,res){
         res.end("File is uploaded");
     });
 });
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
