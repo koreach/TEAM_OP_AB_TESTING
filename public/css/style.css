@@ -32,7 +32,7 @@
   z-index:1;
 }
 
-.menu{z-index:1; font-weight:bold; font-size:1.0em; width: 100%; background:#a2eaba; position:absolute; margin: 0 auto; text-align:center;}
+.menu{z-index:20; font-weight:bold; font-size:1.0em; width: 100%; background:#a2eaba; position:absolute; margin: 0 auto; text-align:center;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; border-bottom:white 0.5px solid;}
 .menu li:hover{display: block;    background:#77dd77; padding:15px 0 15px 0; border-bottom:white 1px solid;}
@@ -159,47 +159,13 @@ nav .active {
 @media screen and (max-width: 768px) { .show { font-size: 3.7vw !important; padding-right: 0 !important;} }
 @media screen and (max-width: 768px) { .bucket-block .right-block p { font-size: 3.3vw !important; } }
 
-.bucket-block .left-block .bucket-description {
-    width: 72%;
-    padding-right: 50px;
-    float: right;
-    font-size: 1.9em;
-}
-
-.bucket-block .right-block {
-    height: 50%;
-    margin-left: 5px
-}
-
-.bucket-block .right-block p{
-    font-size: 30px;
-}
-
-.left-element {
-    float: left;
-    margin-top: 15px;
-		overflow: hidden;
-}
-
-.right-element {
-    float: right;
-		margin-top: 15px;
-		overflow: hidden;
-}
-
-.left-pic {
+.bucket-block .left-pic {
 	float: left;
 	max-width: 100%;
-	border-radius: 10%;
+	margin-top: 15px;
 }
 
-.right-pic {
-	float: right;
-  max-width: 100%;
-	border-radius: 10%;s
-}
-
-.bucket_text {
+.bucket-block .bucket_text {
   z-index: 1;
   position: absolute;
   color: white;
@@ -214,19 +180,13 @@ nav .active {
 	1px 1px 0 #000;
 }
 
-.showmore {
+.bucket-block .showmore {
 	background-color: #77dd77;
 	text-align: center;
-	width: 98%;
+	width: 50%;
 	position: absolute;
 	bottom: 0px;
-}
-
-.nopadding {
-    padding-left: : 0 !important;
-    padding-right: : 0 !important;
-    margin-left: : 0 !important;
-    margin-right: : 0 !important;
+	padding-top: 5px;
 }
 
 .adventureyou {
@@ -325,7 +285,6 @@ nav .active {
   border-radius: 5px;
   width: 90%;
   position: relative;
-  transition: all 5s ease-in-out;
 }
 
 .popup h2 {
