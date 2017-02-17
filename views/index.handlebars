@@ -71,7 +71,7 @@
                             {{#each joinedList.peopleJoined}}
                             <img class="prof-pic" src="{{face}}">
                             {{/each}}
-                        </div> 
+                        </div>
                     </div>
                     <div class="img-layout">
                         <img class="picture" src="{{feedPicture}}">
@@ -80,12 +80,9 @@
                         		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..
                         	</p>
                         	<div>
-
                         		<div onclick="askToJoin()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
-
                         		<div class="col-md-2 col-sm-2 col-xs-2"></div>
                         		<div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
-
                         	</div>
                         </div>
                     </div>
@@ -98,19 +95,14 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-        $('.img-layout').click(function() {        	
+        $('.img-layout').click(function() {
         	$(this).children(".description").toggle(500);
         	$(this).children(".picture").css('opacity', function(i,o) {
         		 return parseFloat(o).toFixed(1) === '0.3' ? 1 : 0.3;
-        	}); 	
+        	});
         });
-        
-        
-
         function addToBucket() {
         	alert("added to bucketlist");
-          
-
         }
         function askToJoin() {
         	alert("Sent request to join");

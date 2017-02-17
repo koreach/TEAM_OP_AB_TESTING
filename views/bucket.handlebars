@@ -60,7 +60,6 @@
         </div>
     </header>
 
-
     <div id="popup1" class="overlay">
       <div class="popup">
         <h2>Here i am</h2>
@@ -105,31 +104,40 @@
       </div>
     </div>
 
+	{{#each friends}}
+  {{/each}}
+
     <!-- The actual bucket list-->
     <section id="bucket">
         <body>
           <div class="container">
+              {{#each bucketlist}}
               <div class="bucket-block">
                   <div class="col-md-6 col-sm-12 col-xs-12 right-element" style="">
-                      <img class="right-pic" src="images/Camping Pic.png">
+                      <img class="right-pic" src="images/night.jpg">
                       <p class= "bucket_text">
-                           Ocean Visit
+                           {{title}}
                       </p>
                       <div class="showmore">
-                	       <a class="button" href="#popup1">Show Me</a>
+                         <a class="button" href="#popup1">Show Me</a>
                       </div>
                     </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12 left-element"  style="">
-                      <img class="left-pic" src="images/City Lights.png">
+                  <div class="col-md-6 col-sm-12 col-xs-12 left-element" style="">
+                      <img class="left-pic" src="images/night.jpg">
                       <p class= "bucket_text">
-                           City Visit
+                           {{title}}
                       </p>
                       <div class="showmore">
-                	       <a class="button" href="#popup2">Show me</a>
+                         <a class="button" href="#popup2">Show me</a>
                       </div>
                     </div>
               </div>
+                        {{/each}}
           </div>
+
+
+
+            <!--
           <div class="container">
               <div class="bucket-block">
                   <div class="col-md-6 col-sm-12 col-xs-12 right-element" style="">
@@ -152,6 +160,7 @@
                     </div>
               </div>
           </div>
+        -->
           <div class="new-adventure">
               <a href="adventure">
                   <h4>
@@ -161,55 +170,6 @@
           </div>
         </body>
     </section>
-
-    <!--
-    <div class="container">
-        <div class="bucket-block">
-            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0 !important">
-                <div class="col-md-12 col-sm-12 col-xs-12 left-element" style="padding: 0 !important">
-                    <div class="left-block">
-                        <div class="col-md-3 col-sm-3 col-xs-3 bucket-prof" style="padding: 0 5px !important">
-                            <img class="left-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                        </div>
-                        <div class="col-md-9 ol-sm-9 col-xs-9 bucket-description">
-                            <strong>Choi Seun Sil</strong>
-                            <p class="bucket-loc">Exploring South Korea</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="right-block">
-                    <p style="line-height: 1.1">Starts at: Seoul <br> Ends at: Blue House</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 right-element" style="padding:0 5px 0 0">
-                <img class="right-pic" src="images/Camping Pic.png">
-            </div>
-        </div>
-        <div class="bucket-block">
-            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0 !important">
-                <div class="col-md-12 col-sm-12 col-xs-12 left-element" style="padding: 0 !important">
-                    <div class="left-block">
-                        <div class="col-md-3 col-sm-3 col-xs-3 bucket-prof" style="padding: 0 5px !important">
-                            <img class="left-pic" src="http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg">
-                        </div>
-                        <div class="col-md-9 ol-sm-9 col-xs-9 bucket-description">
-                            <strong>Choi Seun Sil</strong>
-                            <p class="bucket-loc">Exploring South Korea</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="right-block">
-                    <p style="line-height: 1.1">Starts at: Seoul <br> Ends at: Blue House</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 right-element" style="padding:0 5px 0 0">
-                <img class="right-pic" src="images/Camping Pic.png">
-            </div>
-        </div>
-      -->
-
     <script src="js/main.js"></script>
     <script src="js/bootstrap.js"></script>
 
