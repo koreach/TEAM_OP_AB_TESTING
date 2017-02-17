@@ -4,6 +4,7 @@
  */
 
 var express = require('express');
+var multer = require('multer');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
@@ -15,13 +16,22 @@ var map = require('./routes/map');
 var adventure = require('./routes/adventure');
 var share = require('./routes/share');
 var login = require('./routes/login');
+
+var createlogin = require('./routes/createlogin');
 var add = require('./routes/add');
 
+var app = express();
+var storage = multer.diskStorage({
+  destination: function (req, file, callback) {
+    callback(null, './public/images');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + file.originalname)
+  }});
+var upload = multer({storage :storage}).single('userPhoto');
 
 // Example route
 // var user = require('./routes/user');
-
-var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -51,10 +61,22 @@ app.get('/map', map.view);
 app.get('/adventure', adventure.view);
 app.get('/share', share.view);
 app.get('/login', login.view);
+app.get('/createlogin', createlogin.view);
 app.get('/add', add.addAdventure);
+app.get('/',function(req,res){
+  res.sendFile(__dirname + "bucket");
+});
 
-// Example route
-// app.get('/users', user.list);
+app.post('bucket',function(req,res){
+    upload(req,res,function(err) {
+        console.log(err);
+        if(err) {
+            return res.end("Error uploading file.");
+        }
+        res.end("File is uploaded");
+    });
+});
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

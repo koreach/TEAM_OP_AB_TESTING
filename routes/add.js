@@ -1,4 +1,4 @@
-var data = require("../data.json");
+var data = require("../bucket.json");
 
 exports.addAdventure = function(req, res) {
   var q_title = req.query.title;

@@ -35,9 +35,9 @@
                     <div class="title">
                         <h1 data-barley="login_heading" data-barley-editor="simple">SIGN IN</h1>
                         
-                        <form role="form" action="/login" method="post" accept-charset="utf-8">
+                        <form role="form"  accept-charset="utf-8">
                             <p>
-                                <a href="/user/create" data-barley="login_no_account_link" data-barley-editor="linkedit">
+                                <a href="/createlogin" data-barley="login_no_account_link" data-barley-editor="linkedit">
                                 <span data-barley="login_no_account_1" data-barley-editor="simple">Create your account!</span>
                                 </a>
                                 
@@ -51,11 +51,13 @@
                                     <label for="password" class="sr-only" data-barley="login_label_password" data-barley-editor="simple">Password</label>
                                     <input type="password" class="form-control input-lg" id="inputPassword" name="password" placeholder="PASSWORD">
                                 </p>
-                                <button type="submit" class="login-btn" data-barley="login_submit_btn" data-barley-editor="simple">LOG IN</button>
+                                <a href ="https://a6-adventure-you.herokuapp.com/">
+                                    <input type="button" class="login-btn" data-barley="login_submit_btn" data-barley-editor="simple" value="LOG IN" />
+                                </a>
                             </div>
                         </form>
                         <p>
-                            <a href="/user/forgot_password" data-barley="login_forgot_password" data-barley-editor="linkedit">Forgot Password?</a>
+                            <a href="/createlogin" data-barley="login_forgot_password" data-barley-editor="linkedit">Forgot Password?</a>
                         </p>
                     </div>
                 </div>
