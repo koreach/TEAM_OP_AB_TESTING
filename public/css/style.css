@@ -32,7 +32,7 @@
   z-index:1;
 }
 
-.menu{z-index:1; font-weight:bold; font-size:1.0em; width: 100%; background:#a2eaba; position:absolute; margin: 0 auto; text-align:center;}
+.menu{z-index:2; font-weight:bold; font-size:1.0em; width: 100%; background:#a2eaba; position:absolute; margin: 0 auto; text-align:center;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; border-bottom:white 0.5px solid;}
 .menu li:hover{display: block;    background:#77dd77; padding:15px 0 15px 0; border-bottom:white 1px solid;}
@@ -135,7 +135,7 @@ nav .active {
     color:#fff;
     opacity: 1;
 }
-@media screen and (min-width: 768px) { .img-layout .description { padding-left: 15 !important; padding-right: 45px !important; } }
+@media screen and (min-width: 768px) { .img-layout .description { top: 85px !important; padding-left: 15 !important; padding-right: 45px !important; } }
 .img-layout .description {
     position: absolute;
     top: 75px;
@@ -143,12 +143,13 @@ nav .active {
     width: 100%;
     height: 65%;
 }
-@media screen and (min-width: 768px) { .img-layout .description p { font-size: 20px !important; } }
+@media screen and (min-width: 768px) { .img-layout .description p { font-size: 15px !important; } }
 
 .img-layout .description p{
     font-size: 1.1em;
-    height: 70%;
-    overflow: hidden;
+    
+    /*height: 70%;
+    overflow: hidden;*/
 }
 .img-layout .nav-icon {
     width: 50%;
@@ -175,31 +176,22 @@ nav .active {
     font-size: 30px;
 }
 
-.left-element {
-    float: left;
-    margin-top: 15px;
-		overflow: hidden;
-}
 
-.right-element {
-    float: right;
+.align-element {
 		margin-top: 15px;
 		overflow: hidden;
 }
 
-.left-pic {
-	float: left;
-	max-width: 100%;
-	border-radius: 10%;
+.pic {
+  max-width: 100%;
+	width: 540px;
+  height: 250px;
+  position: relative;
 }
 
-.right-pic {
-	float: right;
-  max-width: 100%;
-	border-radius: 10%;s
-}
 
 .bucket_text {
+  top: 0px;
   z-index: 1;
   position: absolute;
   color: white;
@@ -217,7 +209,7 @@ nav .active {
 .showmore {
 	background-color: #77dd77;
 	text-align: center;
-	width: 98%;
+	width: calc( 100% - 30px );
 	position: absolute;
 	bottom: 0px;
 }
@@ -325,7 +317,7 @@ nav .active {
   border-radius: 5px;
   width: 90%;
   position: relative;
-  transition: all 5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .popup h2 {
@@ -444,3 +436,6 @@ nav .active {
 .login-page a p.forgotpw {
     color: #414a59;
 }
+
+
+

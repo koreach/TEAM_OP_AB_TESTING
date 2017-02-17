@@ -41,7 +41,11 @@
 					}		
 				]
 			}, 
-			"feedPicture": "images/night.jpg"
+			"feedPicture": "images/night.jpg",
+			"description": "Come join us for camping, fishing, hiking, and outdoor bbq'ing!",
+			"startingLoc": "Point Reyes",
+			"endingLoc": "San Francisco",
+			"theme": "Outdoors"
 		},
 		{
 			"month": "NOV",
@@ -60,7 +64,11 @@
 					}	
 				]
 			},			
-			"feedPicture": "images/City Lights.png"
+			"feedPicture": "images/City Lights.png",
+			"description": "Come join us on our trip from Los Angeles to San Francisco: City Lights!!!!",
+			"startingLoc": "Los Angeles",
+			"endingLoc": "San Francisco",
+			"theme": "Tour"
 		},
 		{
 			"month": "NOV",
@@ -79,7 +87,11 @@
 					}	
 				]
 			},			
-			"feedPicture": "images/Beach Image.png"
+			"feedPicture": "images/Beach Image.png",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor !",
+			"startingLoc": "Point Reyes",
+			"endingLoc": "San Francisco",
+			"theme": "Outdoors"
 		},
 		{
 			"month": "NOV",
@@ -98,7 +110,11 @@
 					}	
 				]
 			},			
-			"feedPicture": "images/Camping Pic.png"
+			"feedPicture": "images/Camping Pic.png",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor !",
+			"startingLoc": "Point Reyes",
+			"endingLoc": "San Francisco",
+			"theme": "white house"
 		},
 		{
 			"month": "NOV",
@@ -117,7 +133,11 @@
 					}	
 				]
 			},			
-			"feedPicture": "images/Forest Pic.png"
+			"feedPicture": "images/Forest Pic.png",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor !",
+			"startingLoc": "Point Reyes",
+			"endingLoc": "San Francisco",
+			"theme": "white house"
 		}
 	]
 }

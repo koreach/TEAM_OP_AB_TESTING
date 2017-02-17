@@ -78,17 +78,11 @@
                     <div class="img-layout">
                         <img class="picture" src="{{feedPicture}}">
                         <div class="col-md-6 description">
-                        	<p>
-                                <br>
-                        		Come join us for camping, fishing, hiking, and outdoor bbq'ing!
-                                <br>
-                                <br>
-                                Starting Location: Point Reyes
-                                <br>
-                                Ending Location: San Francisco
-                                <br>
-                                Theme: Outdoors
-                        	</p>
+                        	<p id="description">{{description}}</p>
+                            <p id="starting">Starting Location: <span id="startingLoc">{{startingLoc}}</span></p>
+                            <p id="endingLoc">Ending Location: <span id="endingLoc">{{endingLoc}}</span></p>
+                            <p>Theme: <span id="theme">{{theme}}</span></p>    
+                        	
                         	<div>
                         		<div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
                         		<div class="col-md-2 col-sm-2 col-xs-2"></div>
@@ -109,16 +103,19 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
 
-        $('.img-layout').click(function() {
-        	$(this).children(".description").toggle(500);
-        	$(this).children(".picture").css('opacity', function(i,o) {
+      
 
         $('.bucket-button').click(function() {
             var a = $(this).parent().parent().parent().children().attr('src');
             var b = $(this).parent().parent().parent().parent().children().children().children('.month').text();
             var c = $(this).parent().parent().parent().parent().children().children().children('.date').text();
-            alert(c);
-            $.get("bucket", {title: b, date: b, theme: c, startingLoc: c, endingLoc: b, picture: a});
+            var d = $(this).parent().parent().children('#description').text();
+            var e = $(this).parent().parent().children().children('#startingLoc').text();
+            var f = $(this).parent().parent().children().children('#endingLoc').text();
+            var g = $(this).parent().parent().children().children('#theme').text();
+            
+            var z = b + c; 
+            $.get("buckets", {picture: a, date: z, description: d, startingLoc: e, endingLoc: f, theme: g});
         });
 
         $('.img-layout').click(function() {

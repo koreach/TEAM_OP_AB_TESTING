@@ -6,6 +6,16 @@ exports.view = function(req, res){
 var buckets = require('../bucket.json');
 
 exports.view = function(req, res){
-  var buc = { title: req.query.title, date: "b",theme: "c",startingLoc: "d", endingLoc: "e", picture: "http://itzkong.s3-us-west-2.amazonaws.com/wp-content/uploads/2016/10/27140330/itzkong_20161027150333-422x375.jpg"}
-  res.render('bucket',buckets); buckets.bucketlist.push(buc);
+  
+  res.render('bucket',buckets); 
+};
+
+exports.addToBucket = function(req, res) {
+	var buc = { picture: req.query.picture, date: req.query.date, 
+  				description: req.query.description, 
+  				startingLoc: req.query.startingLoc, 
+  				endingLoc: req.query.endingLoc, 
+  				theme: req.query.theme
+  			};
+  	res.render('bucket',buckets); buckets.bucketlist.push(buc);
 };

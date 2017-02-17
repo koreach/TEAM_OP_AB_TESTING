@@ -1,174 +1,153 @@
 <!doctype html>
 <html>
-    <head>
-        <title>ADVENTURE YOU</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=
-            device-width, height=device-height, initial-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        </link>
-        <link rel="stylesheet" href="css/bootstrap-theme.css">
-        </link>
-        <link rel="stylesheet" href="css/style.css">
-        </link>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    </head>
 
-    <!-- the menu bar-->
-    <header>
-        <div id="header">
-            <div class="container">
-                <div>
-                    <div class="title">
-                        <a href="/"><img class="adventureyou" src="images/ADVENTURE YOU.png"></a>
-                    </div>
-                    <div>
-                        <nav>
-                            <ul>
-                                <div class="navbar-menu">
-                                    <li><a href="friend"><img class="nav-icon" src="images/Profile Icon.png"></a></li>
-                                    <li><a href="/"><img class="nav-icon" src="images/Feed Icon.png"></a></li>
-                                    <li><a href="map"><img class="nav-icon" src="images/Map Icon.png"></a></li>
-                                    <li><a class="active" href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a></li>
-                                    <li><button class="hamburger">&#9776;</button>
-                                    </li>
-                                </div>
-                            </ul>
-                        </nav>
-                    </div>
+<head>
+    <title>ADVENTURE YOU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=
+            device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    </link>
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    </link>
+    <link rel="stylesheet" href="css/style.css">
+    </link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<!-- the menu bar-->
+<header>
+    <div id="header">
+        <div class="container">
+            <div>
+                <div class="title">
+                    <a href="/"><img class="adventureyou" src="images/ADVENTURE YOU.png"></a>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <a href="https://a6-adventure-you.herokuapp.com/login">
-                            <li>Log Out</li>
-                        </a>
-                        <a href="https://a6-adventure-you.herokuapp.com/friend">
-                            <li>Create an Adventure</li>
-                        </a>
-                        <a href="https://a6-adventure-you.herokuapp.com/">
-                            <li>Newsfeed</li>
-                        </a>
-                        <a href="https://a6-adventure-you.herokuapp.com/map">
-                            <li>Hotspots</li>
-                        </a>
-                        <a href="https://a6-adventure-you.herokuapp.com/bucket">
-                            <li>Bucket List</li>
-                        </a>
-                    </ul>
+                <div>
+                    <nav>
+                        <ul>
+                            <div class="navbar-menu">
+                                <li>
+                                    <a href="friend"><img class="nav-icon" src="images/Profile Icon.png"></a>
+                                </li>
+                                <li>
+                                    <a href="/"><img class="nav-icon" src="images/Feed Icon.png"></a>
+                                </li>
+                                <li>
+                                    <a href="map"><img class="nav-icon" src="images/Map Icon.png"></a>
+                                </li>
+                                <li>
+                                    <a class="active" href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a>
+                                </li>
+                                <li>
+                                    <button class="hamburger">&#9776;</button>
+                                </li>
+                            </div>
+                        </ul>
+                    </nav>
                 </div>
             </div>
+            <div class="menu">
+                <ul>
+                    <a href="https://a6-adventure-you.herokuapp.com/login">
+                        <li>Log Out</li>
+                    </a>
+                    <a href="https://a6-adventure-you.herokuapp.com/friend">
+                        <li>Create an Adventure</li>
+                    </a>
+                    <a href="https://a6-adventure-you.herokuapp.com/">
+                        <li>Newsfeed</li>
+                    </a>
+                    <a href="https://a6-adventure-you.herokuapp.com/map">
+                        <li>Hotspots</li>
+                    </a>
+                    <a href="https://a6-adventure-you.herokuapp.com/bucket">
+                        <li>Bucket List</li>
+                    </a>
+                </ul>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <div id="popup1" class="overlay">
-      <div class="popup">
+<!-- The actual bucket list-->
+
+
+<div id="popup2" class="overlay">
+    <div class="popup">
         <h2>Here i am</h2>
         <a class="close" href="#">&times;</a>
         <div class="content">
-          <img class="overlayimg" src="images/Camping Pic.png">
-          Thank to pop me out of that button, but now i'm done so you can close this window.
+            <img class="overlayimg" src="images/City Lights.png"> Thank to pop me out of that button, but now i'm done so you can close this window.
         </div>
-      </div>
     </div>
+</div>
 
-    <div id="popup2" class="overlay">
-      <div class="popup">
+<div id="popup3" class="overlay">
+    <div class="popup">
         <h2>Here i am</h2>
         <a class="close" href="#">&times;</a>
         <div class="content">
-          <img class="overlayimg" src="images/City Lights.png">
-          Thank to pop me out of that button, but now i'm done so you can close this window.
+            <img class="overlayimg" src="images/Beach Image.png"> ASDASDASDASDThank to pop me out of that button, but now i'm done so you can close this window.
         </div>
-      </div>
     </div>
+</div>
 
-    <div id="popup3" class="overlay">
-      <div class="popup">
+<div id="popup4" class="overlay">
+    <div class="popup">
         <h2>Here i am</h2>
         <a class="close" href="#">&times;</a>
         <div class="content">
-          <img class="overlayimg" src="images/Beach Image.png">
-          ASDASDASDASDThank to pop me out of that button, but now i'm done so you can close this window.
+            <img class="overlayimg" src="images/Forest Pic.png"> Thank to pop me out of that button, but now i'm done so you can close this window.
         </div>
-      </div>
     </div>
+</div>
 
-    <div id="popup4" class="overlay">
-      <div class="popup">
-        <h2>Here i am</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          <img class="overlayimg" src="images/Forest Pic.png">
-          Thank to pop me out of that button, but now i'm done so you can close this window.
+<!-- The actual bucket list-->
+<section id="bucket">
+
+    <body>
+        <div class="container">
+            {{#each bucketlist}}
+            <div class="bucket-block">
+                <div class="col-md-6 col-sm-12 col-xs-12 align-element">
+                    <img class="pic" src="{{picture}}">
+                    <p class="bucket_text">
+                        {{theme}}
+                    </p>
+                    <div class="showmore">
+                        <a class="button" href="#popup">Show Me</a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup" class="overlay">
+                <div class="popup">
+                    <h2>{{date}}</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content" style="text-align: center">
+                        <img class="overlayimg" src="{{picture}}"> 
+                        <p>{{description}}</p>
+                        <p>Starting Location: {{startingLoc}}</p>
+                        <p>Ending Location: {{endingLoc}}</p>
+                        <p>Theme:{{theme}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
         </div>
-      </div>
-    </div>
 
-    <!-- The actual bucket list-->
-    <section id="bucket">
-        <body>
-          <div class="container">
-              {{#each bucketlist}}
-              <div class="bucket-block">
-                  <div class="col-md-6 col-sm-12 col-xs-12 right-element" style="">
-                      <img class="right-pic" src="images/night.jpg">
-                      <p class= "bucket_text">
-                           {{title}}
-                      </p>
-                      <div class="showmore">
-                         <a class="button" href="#popup1">Show Me</a>
-                      </div>
-                    </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12 left-element" style="">
-                      <img class="left-pic" src="images/night.jpg">
-                      <p class= "bucket_text">
-                           {{title}}
-                      </p>
-                      <div class="showmore">
-                         <a class="button" href="#popup2">Show me</a>
-                      </div>
-                    </div>
-              </div>
-                        {{/each}}
-          </div>
-
-
-
-            <!--
-          <div class="container">
-              <div class="bucket-block">
-                  <div class="col-md-6 col-sm-12 col-xs-12 right-element" style="">
-                      <img class="right-pic" src="images/Beach Image.png">
-                      <p class= "bucket_text">
-                           Beach Visit
-                      </p>
-                      <div class="showmore">
-                         <a class="button" href="#popup3">Show me</a>
-                      </div>
-                    </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12 left-element" style="s">
-                      <img class="left-pic layer" src="images/Forest Pic.png">
-                      <p class= "bucket_text">
-                           Ocean Visit
-                      </p>
-                      <div class="showmore">
-                         <a class="button" href="#popup4">Show me</a>
-                      </div>
-                    </div>
-              </div>
-          </div>
-        -->
-          <div class="new-adventure">
-              <a href="adventure">
-                  <h4>
+        <div class="new-adventure">
+            <a href="adventure">
+                <h4>
                       Add new adventure<bold>+</bold>
-                  </h4>
-              </a>
-          </div>
-        </body>
-    </section>
-    <script src="js/main.js"></script>
-    <script src="js/bootstrap.js"></script>
+                </h4>
+            </a>
+        </div>
+    </body>
+</section>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.js"></script>
 
 </script>
+
 </html>
