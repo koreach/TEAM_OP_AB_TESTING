@@ -43,12 +43,13 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/bucket', bucket.view);
+app.get('/bucket', bucket.view); 
 app.get('/friend', friend.view);
 app.get('/map', map.view);
 app.get('/adventure', adventure.view);
 app.get('/share', share.view);
 app.get('/login', login.view);
+
 // Example route
 // app.get('/users', user.list);
 
