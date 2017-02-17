@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="css/style.css">
         </link>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
     </head>
     <header>
         <div id="header">
@@ -80,7 +82,7 @@
                         		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..
                         	</p>
                         	<div>
-                        		<div onclick="askToJoin()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
+                        		<div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
                         		<div class="col-md-2 col-sm-2 col-xs-2"></div>
                         		<div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
                         	</div>
@@ -88,10 +90,13 @@
                     </div>
                 </div>
                 {{/each}}
+
+
             </div>
         </div>
     </body>
     </section>
+
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
@@ -102,10 +107,20 @@
         	});
         });
         function addToBucket() {
-        	alert("added to bucketlist");
+        	swal({
+                title: "Error!",
+                text: "Here's my error message!",
+                type: "error",
+                confirmButtonText: "Cool"
+            });
+
         }
-        function askToJoin() {
-        	alert("Sent request to join");
+        function comment() {
+        	var feedback = prompt("Offer more adventure ideas!");
+
+            if (person != null) {
+                "Thank you for your feedback!";
+            }
         }
     </script>
 </html>

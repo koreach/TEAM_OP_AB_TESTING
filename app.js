@@ -52,6 +52,7 @@ app.get('/adventure', adventure.view);
 app.get('/share', share.view);
 app.get('/login', login.view);
 app.get('/add', add.addAdventure);
+
 // Example route
 // app.get('/users', user.list);
 
