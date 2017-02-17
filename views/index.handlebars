@@ -115,20 +115,47 @@
 
         function addToBucket() {
         	swal({
-                title: "Error!",
-                text: "Here's my error message!",
-                type: "error",
-                confirmButtonText: "Cool"
+                title: "Added to bucket!",
+               // text: "Here's my error message!",
+                type: "success",
+                showCancelButton: true,
+                cancelButtonText: "Look at more Adventures",
+                confirmButtonText: "Head to the bucket page",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+
+            function(isConfirm) {
+                if(isConfirm) {
+                    window.location.replace("https://adventure-you.herokuapp.com/bucket");
+                }else {
+                    window.location.replace("https://adventure-you.herokuapp.com/");
+                }
+
             });
           
 
         }
         function comment() {
-        	var feedback = prompt("Offer more adventure ideas!");
-            
-            if (person != null) {
-                "Thank you for your feedback!";
-            }
+        	swal({
+              title: "Offer more Adventure Ideas!",
+              text: "Your idea:",
+              type: "input",
+              showCancelButton: true,
+              closeOnConfirm: false,
+              animation: "slide-from-top",
+              inputPlaceholder: "Idea"
+            },
+            function(inputValue){
+              if (inputValue === false) return false;
+              
+              if (inputValue === "") {
+                swal.showInputError("You need to write something!");
+                return false
+              }
+            swal("Nice!", "Your friend will love your input.");
+            });
+
         }
     </script>
 </html>
