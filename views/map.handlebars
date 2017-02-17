@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/bootstrap-theme.css"></link>
 	<link rel="stylesheet" href="css/style.css"></link>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+
 	<style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -107,10 +107,7 @@
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.'); 
             map.setCenter(pos);
-            var marker = new google.maps.Marker({
-          position: pos,
-          map: map
-        });
+            
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
