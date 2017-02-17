@@ -64,7 +64,6 @@ nav li button {
 nav li button:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    background-color: #77dd77;
     width: 20%;
 }
 

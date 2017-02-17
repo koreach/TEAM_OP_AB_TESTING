@@ -45,7 +45,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/bucket', bucket.view);
+app.get('/bucket', bucket.view); 
 app.get('/friend', friend.view);
 app.get('/map', map.view);
 app.get('/adventure', adventure.view);

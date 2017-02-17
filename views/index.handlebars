@@ -38,20 +38,20 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <a href="#">
-                            <li>LINK ONE</li>
+                        <a href="https://a6-adventure-you.herokuapp.com/login">
+                            <li>Log Out</li>
                         </a>
-                        <a href="#">
-                            <li>LINK TWO</li>
+                        <a href="https://a6-adventure-you.herokuapp.com/friend">
+                            <li>Create an Adventure</li>
                         </a>
-                        <a href="#">
-                            <li>LINK THREE</li>
+                        <a href="https://a6-adventure-you.herokuapp.com/">
+                            <li>Newsfeed</li>
                         </a>
-                        <a href="#">
-                            <li>LINK FOUR</li>
+                        <a href="https://a6-adventure-you.herokuapp.com/map">
+                            <li>Hotspots</li>
                         </a>
-                        <a href="#">
-                            <li>LINK FIVE</li>
+                        <a href="https://a6-adventure-you.herokuapp.com/bucket">
+                            <li>Bucket List</li>
                         </a>
                     </ul>
                 </div>
@@ -79,7 +79,15 @@
                         <img class="picture" src="{{feedPicture}}">
                         <div class="col-md-6 description">
                         	<p>
-                        		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..
+                                <br>
+                        		Come join us for camping, fishing, hiking, and outdoor bbq'ing!
+                                <br>
+                                <br>
+                                Starting Location: Point Reyes
+                                <br>
+                                Ending Location: San Francisco
+                                <br>
+                                Theme: Outdoors
                         	</p>
                         	<div>
                         		<div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
@@ -100,12 +108,31 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
+
+        $('.img-layout').click(function() {
+        	$(this).children(".description").toggle(500);
+        	$(this).children(".picture").css('opacity', function(i,o) {
+
+        $('.bucket-button').click(function() {
+            var a = $(this).parent().parent().parent().children().attr('src');
+            var b = $(this).parent().parent().parent().parent().children().children().children('.month').text();
+            var c = $(this).parent().parent().parent().parent().children().children().children('.date').text();
+            alert(c);
+            $.get("bucket", {title: b, date: b, theme: c, startingLoc: c, endingLoc: b, picture: a});
+        });
+
         $('.img-layout').click(function() {
         	$(this).children(".description").toggle(500);
         	$(this).children(".picture").css('opacity', function(i,o) {
         		 return parseFloat(o).toFixed(1) === '0.3' ? 1 : 0.3;
         	});
         });
+
+
+        function askToJoin() {
+        	alert("Sent request to join");
+        }
+
         function addToBucket() {
         	swal({
                 title: "Added to bucket!",
@@ -120,9 +147,9 @@
 
             function(isConfirm) {
                 if(isConfirm) {
-                    window.location.replace("https://adventure-you.herokuapp.com/bucket");
+                    window.location.replace("https://a6-adventure-you.herokuapp.com/bucket");
                 }else {
-                    window.location.replace("https://adventure-you.herokuapp.com/");
+                    window.location.replace("https://a6-adventure-you.herokuapp.com/");
                 }
 
             });
