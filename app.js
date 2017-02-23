@@ -1,13 +1,14 @@
-
 /**
  * Module dependencies.
  */
-
 var express = require('express');
-var multer = require('multer');
+//var multer = require('multer');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
+var formidable = require('formidable');
+var fs = require('fs-extra');
+var qt = require('quickthumb');
 
 var index = require('./routes/index');
 var bucket = require('./routes/bucket');
@@ -19,21 +20,11 @@ var login = require('./routes/login');
 
 var createlogin = require('./routes/createlogin');
 var add = require('./routes/add');
-
+var util = require('util');
 var app = express();
-var storage = multer.diskStorage({
-  destination: function (req, file, callback) {
-    callback(null, './public/images');
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + file.originalname)
-  }});
-var upload = multer({storage :storage}).single('userPhoto');
+var bodyParser = require('body-parser');
 
-// Example route
-// var user = require('./routes/user');
 
-// all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
@@ -47,37 +38,33 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+    app.use(express.errorHandler());
 }
+
 
 // Add routes here
 app.get('/', index.view);
-app.get('/bucket', bucket.view); app.get('/buckets', bucket.addToBucket); 
+app.get('/bucket', bucket.view);
+
 app.get('/friend', friend.view);
 app.get('/map', map.view);
 app.get('/adventure', adventure.view);
 app.get('/share', share.view);
 app.get('/login', login.view);
 app.get('/createlogin', createlogin.view);
-app.get('/add', add.addAdventure);
-app.get('/',function(req,res){
-  res.sendFile(__dirname + "bucket");
-});
+//app.get('/add', add.addAdventure);
 
-app.post('bucket',function(req,res){
-    upload(req,res,function(err) {
-        console.log(err);
-        if(err) {
-            return res.end("Error uploading file.");
-        }
-        res.end("File is uploaded");
-    });
-});
+app.use(qt.static(__dirname + '/'));
+app.post('/upload', add.upload);
+app.get('/upload', friend.view);
 
-
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(app.get('port'), function() {
+    console.log('Express server listening on port ' + app.get('port'));
 });

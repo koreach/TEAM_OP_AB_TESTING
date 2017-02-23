@@ -36,74 +36,70 @@
                         </nav>
                     </div>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <a href="https://a6-adventure-you.herokuapp.com/login">
-                            <li>Log Out</li>
-                        </a>
-                        <a href="https://a6-adventure-you.herokuapp.com/friend">
-                            <li>Create an Adventure</li>
-                        </a>
-                        <a href="https://a6-adventure-you.herokuapp.com/">
-                            <li>Newsfeed</li>
-                        </a>
-                        <a href="https://a6-adventure-you.herokuapp.com/map">
-                            <li>Hotspots</li>
-                        </a>
-                        <a href="https://a6-adventure-you.herokuapp.com/bucket">
-                            <li>Bucket List</li>
-                        </a>
-                    </ul>
+                <div style="position: relative;">
+                    <div class="menu">
+                        <ul>
+                            <a href="https://a6-adventure-you.herokuapp.com/login">
+                                <li>Log Out</li>
+                            </a>
+                            <a href="https://a6-adventure-you.herokuapp.com/friend">
+                                <li>Create an Adventure</li>
+                            </a>
+                            <a href="https://a6-adventure-you.herokuapp.com/">
+                                <li>Newsfeed</li>
+                            </a>
+                            <a href="https://a6-adventure-you.herokuapp.com/map">
+                                <li>Hotspots</li>
+                            </a>
+                            <a href="https://a6-adventure-you.herokuapp.com/bucket">
+                                <li>Bucket List</li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <section id="index">
-    <body>
-        <div class="container">
-            <div>
-                {{#each feed_object}}
-                <div class="feed-box col-md-6 col-sm-12 col-xs-12">
-                    <div>
-                    	<div class="monthDateContainer">
-                    		<div class="month">{{month}} </div>
-                    		<div class="date">{{date}} </div>
-                    	</div>
-                        <div class="feed-info">
-                            {{#each joinedList.peopleJoined}}
-                            <img class="prof-pic" src="{{face}}">
-                            {{/each}}
+        <body>
+            <div class="container">
+                <div>
+                    {{#each feed_object}}
+                    <div class="feed-box col-md-6 col-sm-12 col-xs-12">
+                        <div>
+                            <div class="monthDateContainer">
+                                <div class="month">{{month}} </div>
+                                <div class="date">{{date}} </div>
+                            </div>
+                            <div class="feed-info">
+                                {{#each joinedList.peopleJoined}}
+                                <img class="prof-pic" src="{{face}}">
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="img-layout">
+                            <img class="picture" src="{{feedPicture}}">
+                            <div class="col-md-6 description">
+                                <p id="description">{{description}}</p>
+                                <p id="starting">Starting Location: <span id="startingLoc">{{startingLoc}}</span></p>
+                                <p id="endingLoc">Ending Location: <span id="endingLoc">{{endingLoc}}</span></p>
+                                <p>Theme: <span id="theme">{{theme}}</span></p>
+                                <div>
+                                    <div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                                    <div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="img-layout">
-                        <img class="picture" src="{{feedPicture}}">
-                        <div class="col-md-6 description">
-                        	<p id="description">{{description}}</p>
-                            <p id="starting">Starting Location: <span id="startingLoc">{{startingLoc}}</span></p>
-                            <p id="endingLoc">Ending Location: <span id="endingLoc">{{endingLoc}}</span></p>
-                            <p>Theme: <span id="theme">{{theme}}</span></p>    
-                        	
-                        	<div>
-                        		<div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
-                        		<div class="col-md-2 col-sm-2 col-xs-2"></div>
-                        		<div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
-                        	</div>
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
-                {{/each}}
-
-
             </div>
-        </div>
-    </body>
+        </body>
     </section>
-
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-
-
         $('.bucket-button').click(function() {
             var a = $(this).parent().parent().parent().children().attr('src');
             var b = $(this).parent().parent().parent().parent().children().children().children('.month').text();
@@ -116,21 +112,21 @@
             var z = b + c; 
             $.get("buckets", {picture: a, date: z, description: d, startingLoc: e, endingLoc: f, theme: g});
         });
-
+        
         $('.img-layout').click(function() {
-        	$(this).children(".description").toggle(500);
-        	$(this).children(".picture").css('opacity', function(i,o) {
-        		 return parseFloat(o).toFixed(1) === '0.3' ? 1 : 0.3;
-        	});
+            $(this).children(".description").toggle(500);
+            $(this).children(".picture").css('opacity', function(i,o) {
+                 return parseFloat(o).toFixed(1) === '0.3' ? 1 : 0.3;
+            });
         });
-
-
+        
+        
         function askToJoin() {
-        	alert("Sent request to join");
+            alert("Sent request to join");
         }
-
+        
         function addToBucket() {
-        	swal({
+            swal({
                 title: "Added to bucket!",
                // text: "Here's my error message!",
                 type: "success",
@@ -140,24 +136,24 @@
                 closeOnConfirm: false,
                 closeOnCancel: false
             },
-
+        
             function(isConfirm) {
                 if(isConfirm) {
                     window.location.replace("https://a6-adventure-you.herokuapp.com/bucket");
                 }else {
                     window.location.replace("https://a6-adventure-you.herokuapp.com/");
                 }
-
+        
             });
-
+        
         }
         function comment() {
-        	var feedback = prompt("Offer more adventure ideas!");
-
+            var feedback = prompt("Offer more adventure ideas!");
+        
             if (person != null) {
                 "Thank you for your feedback!";
             }
-        	swal({
+            swal({
               title: "Offer more Adventure Ideas!",
               text: "Your idea:",
               type: "input",
@@ -168,7 +164,7 @@
             },
             function(inputValue){
               if (inputValue === false) return false;
-
+        
               if (inputValue === "") {
                 swal.showInputError("You need to write something!");
                 return false

@@ -12,6 +12,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "body-parser": "^1.16.1",
     "express": "3.x",
     "express-fileupload": "0.0.7",
     "express3-handlebars": "*",
@@ -21,5 +22,10 @@
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "should": "~7.1.0",
+    "mocha": "~2.3.3",
+    "supertest": "~1.1.0"
   }
 }

@@ -1,21 +1,6 @@
 {
 	"bucketlist":
 	[
-		{
-			"picture": "images/night.jpg",
-			"date": "DEC 31",
-			"description": "testing testing",
-			"startingLoc": "LA",
-			"endingLoc": "NY",
-			"theme": "CSE170"	
-		},
-		{
-			"picture": "images/lajolla_beach.png",
-			"date": "JAN 11",
-			"description": "testing testing",
-			"startingLoc": "SF",
-			"endingLoc": "NY",
-			"theme": "COGS120"	
-		}
+		
 	]
 }
