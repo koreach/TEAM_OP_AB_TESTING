@@ -6,7 +6,7 @@ var qt = require('quickthumb');
 var util = require('util');
 var bodyparser = require('body-parser');
 
-var title, date, theme, startingloc, endingloc, pic;
+var title, date, theme, description, startingloc, endingloc, pic;
 module.exports = {
     upload: function(req, res) {
         var form = new formidable.IncomingForm();
@@ -15,6 +15,7 @@ module.exports = {
             title = fields.title;
             date = fields.date;
             theme = fields.theme;
+            description = fields.description;
             startingloc = fields.startingLoc;
             endingloc = fields.endingLoc;
             //res.writeHead(200, {'content-type': 'text/plain'});
@@ -34,6 +35,7 @@ module.exports = {
                 "title": title,
                 "date": date,
                 "theme": theme,
+                "description": description,
                 "startingLoc": startingloc,
                 "endingLoc": endingloc,
                 "picture": "images/" + pic
