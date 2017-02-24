@@ -323,7 +323,20 @@ nav .active {
 
 .popup-btn-close {
 	color: #4EBD79;
-	transition: all 200ms;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.popup-btn-share {
+	color: #4EBD79;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.popup-btn-start {
+	color: #4EBD79;
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -453,7 +466,7 @@ nav .active {
 }
 
 /***** start adventuring page  ******/
-.clicked {
+.adventure .clicked {
 	background-color: red;
 	text-align: center;
 	width: 100%;
@@ -465,14 +478,68 @@ nav .active {
 	cursor: pointer;
 }
 
-.adventurestatus {
-		background-color: #77dd77;
+.adventure .adventures {
+	background-color: #a2eaba;
+	text-align: left;
+	width: 100%;
+	bottom: 0px;
+  padding-top: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.adventure .adventurestatus {
+	background-color: red;
+	text-align: center;;
+	width: 100%;
+	color: #fff;
+	font-size: 3.0vw;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.adventure .text-box {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.adventure h1 {
+	padding-left: 15px;
+	margin-bottom: 0px;
+	font-size: 50px;
+}
+
+.adventure p {
+	font-size: 34px;
+	font-weight: bold;
+	margin-bottom: 0px;
+	line-height: 1.3;
+	padding-left: 5px;
+}
+
+.adventure p1 {
+		font-size: 25px;
+	 	margin-bottom: 0px;
+		padding-left: 30px;
+	 }
+
+ @media screen and (max-width: 768px)
+ { .adventure h1 {font-size: 4.5vw!important; } }
+
+ @media screen and (max-width: 768px)
+ { .adventure p {font-size: 3.2vw!important;} }
+
+ @media screen and (max-width: 768px)
+ { .adventure p1 {font-size: 3.0vw!important;} }
+
+.adventure .pictures {
+  max-width: 100%;
+	width: 555px;
+  position: relative;
+}
+
+.adventure .stopbutton {
+	background-color: #77dd77;
+		color: #fff;
 		text-align: center;
-		width: 100%;
-		bottom: 0px;
-		padding-top: 5px;
-		font-size: 1.5em;
-	  color: #fff;
-	  text-decoration: none;
-	  cursor: pointer;
 }

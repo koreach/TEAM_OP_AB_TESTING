@@ -49,9 +49,10 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-
 // Add routes here
 app.get('/', index.view);
+app.get('/feed', index.addToFeed);
+
 app.get('/bucket', bucket.view);
 app.get('/buckets', bucket.addToBucket);
 
@@ -61,7 +62,9 @@ app.get('/adventure', adventure.view);
 //app.get('/share', share.view);
 app.get('/login', login.view);
 app.get('/createlogin', createlogin.view);
+
 app.get('/start_adventure', start_adventure.view);
+app.get('/adventures', start_adventure.addToAdventure);
 //app.get('/add', add.addAdventure);
 
 app.use(qt.static(__dirname + '/'));

@@ -83,15 +83,17 @@
                           {{theme}}
                       </p>
                       <a class="popup-trigger">Show More</a>
-                        <div class="popup">
+                      <div class="popup">
                           <div class="content" style="text-align: center">
                               <img class="overlayimg" src="{{picture}}">
-                              <p>{{description}}</p>
-                              <p>Starting Location: {{startingLoc}}</p>
-                              <p>Ending Location: {{endingLoc}}</p>
-                              <p>Theme:{{theme}}</p>
+                              <p id ="description">{{description}}</p>
+                              <p>Starting Location:  <span id="startingLoc">{{startingLoc}}</span></p>
+                              <p>Ending Location:  <span id="endingLoc">{{endingLoc}}</span></p>
+                              <p>Theme:<span id="theme">{{theme}}</span></p>
                           </div>
                         <span class="popup-btn-close">close</span>
+                        <span class="popup-btn-share">share</span>
+                        <span class="popup-btn-start">start adventure</span>
                       </div>
                   </div>
               </div>
@@ -104,6 +106,17 @@
 <script src="js/bootstrap.js"></script>
 
 <script>
+
+//Add to start_adventure
+$('.popup-btn-start').click(function() {
+    var a = $(this).parent().children().children().attr('src');
+    var d = $(this).parent().children().children().children('#description').text();
+    var e = $(this).parent().children().children().children('#startingLoc').text();
+    var f = $(this).parent().children().children().children('#endingLoc').text();
+    var g = $(this).parent().children().children().children('#theme').text();
+    $.get("adventures", {picture: a, description: d, startingLoc: e, endingLoc: f, theme: g});
+});
+
 // Popup Window
 var scrollTop = '';
 var newHeight = '100';
@@ -125,6 +138,17 @@ $('html, .popup-btn-close').click(function(e) {
   document.body.style.overflow = "visible";
   $('.popup').hide();
   $('.page-cover').detach();
+});
+
+$('.popup-btn-share').click(function() {
+    var a = $(this).parent().children().children().attr('src');
+    var d = $(this).parent().children().children().children('#description').text();
+    var e = $(this).parent().children().children().children('#startingLoc').text();
+    var f = $(this).parent().children().children().children('#endingLoc').text();
+    var g = $(this).parent().children().children().children('#theme').text();
+    var b = "DEC";
+    var d = "10";
+    $.get("feed", {feedPicture: a, description: d, startingLoc: e, endingLoc: f, theme: g, month: b, date: d});
 });
 
 $('.popup').click(function(e){
