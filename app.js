@@ -13,10 +13,11 @@ var qt = require('quickthumb');
 var index = require('./routes/index');
 var bucket = require('./routes/bucket');
 var friend = require('./routes/friend');
-var map = require('./routes/map');
+//var map = require('./routes/map');
 var adventure = require('./routes/adventure');
-var share = require('./routes/share');
+//var share = require('./routes/share');
 var login = require('./routes/login');
+var start_adventure = require('./routes/start_adventure');
 
 var createlogin = require('./routes/createlogin');
 var add = require('./routes/add');
@@ -52,14 +53,15 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/bucket', bucket.view);
-app.get('/buckets', bucket.addToBucket); 
+app.get('/buckets', bucket.addToBucket);
 
 app.get('/friend', friend.view);
-app.get('/map', map.view);
+//app.get('/map', map.view);
 app.get('/adventure', adventure.view);
-app.get('/share', share.view);
+//app.get('/share', share.view);
 app.get('/login', login.view);
 app.get('/createlogin', createlogin.view);
+app.get('/start_adventure', start_adventure.view);
 //app.get('/add', add.addAdventure);
 
 app.use(qt.static(__dirname + '/'));

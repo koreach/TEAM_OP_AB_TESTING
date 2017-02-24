@@ -15,7 +15,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
-<!-- the menu bar-->
 <header>
     <div id="header">
         <div class="container">
@@ -34,13 +33,13 @@
                                     <a href="/"><img class="nav-icon" src="images/Feed Icon.png"></a>
                                 </li>
                                 <li>
-                                    <a href="map"><img class="nav-icon" src="images/Map Icon.png"></a>
+                                    <a href="start_adventure"><img class="nav-icon" src="images/Map Icon.png"></a>
                                 </li>
                                 <li>
                                     <a class="active" href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a>
                                 </li>
                                 <li>
-                                    <button class="hamburger">&#9776;</button>
+                                <button class="hamburger">&#9776;</button>
                                 </li>
                             </div>
                         </ul>
@@ -50,74 +49,87 @@
             <div style="position: relative;">
                     <div class="menu">
                         <ul>
-                            <a href="https://a6-adventure-you.herokuapp.com/login">
+                            <a href="login">
                                 <li>Log Out</li>
                             </a>
-                            <a href="https://a6-adventure-you.herokuapp.com/friend">
+                            <a href="friend">
                                 <li>Create an Adventure</li>
                             </a>
-                            <a href="https://a6-adventure-you.herokuapp.com/">
+                            <a href="/">
                                 <li>Newsfeed</li>
                             </a>
-                            <a href="https://a6-adventure-you.herokuapp.com/map">
-                                <li>Hotspots</li>
+                            <a href="start_adventure">
+                                <li>Start Adventuring</li>
                             </a>
-                            <a href="https://a6-adventure-you.herokuapp.com/bucket">
+                            <a href="bucket">
                                 <li>Bucket List</li>
                             </a>
                         </ul>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- The actual bucket list-->
-
-
-<!-- The actual bucket list-->
 <section id="bucket">
-
     <body>
         <div class="container">
             {{#each bucketlist}}
-            <div class="bucket-block">
-                <div class="col-md-6 col-sm-12 col-xs-12 align-element">
-                    <img class="pic" src="{{picture}}">
-                    <p class="bucket_text">
-                        {{theme}}
-                    </p>
-                    <div class="showmore">
-                        <a class="button" href="#popup">Show Me</a>
-                    </div>
-                </div>
-            </div>
-            <div id="popup" class="overlay">
-                <div class="popup">
-                    <h2>{{date}}</h2>
-                    <a class="close" href="#">&times;</a>
-                    <div class="content" style="text-align: center">
-                        <img class="overlayimg" src="{{picture}}"> 
-                        <p>{{description}}</p>
-                        <p>Starting Location: {{startingLoc}}</p>
-                        <p>Ending Location: {{endingLoc}}</p>
-                        <p>Theme:{{theme}}</p>
-                    </div>
-                </div>
-            </div>
+              <div class="bucket-block">
+                  <div class="col-md-6 col-sm-12 col-xs-12 align-element">
+                    <!-- clearfix visible-md visible-lg visible-xs visible-sm-->
+                      <img class="pic" src="{{picture}}">
+                      <p class="bucket_text">
+                          {{theme}}
+                      </p>
+                      <a class="popup-trigger">Show More</a>
+                        <div class="popup">
+                          <div class="content" style="text-align: center">
+                              <img class="overlayimg" src="{{picture}}">
+                              <p>{{description}}</p>
+                              <p>Starting Location: {{startingLoc}}</p>
+                              <p>Ending Location: {{endingLoc}}</p>
+                              <p>Theme:{{theme}}</p>
+                          </div>
+                        <span class="popup-btn-close">close</span>
+                      </div>
+                  </div>
+              </div>
             {{/each}}
-        </div>
-
-        <div class="new-adventure">
-            <a href="adventure">
-                <h4>Add new adventure<bold>+</bold></h4>
-            </a>
         </div>
     </body>
 </section>
+
 <script src="js/main.js"></script>
 <script src="js/bootstrap.js"></script>
 
+<script>
+// Popup Window
+var scrollTop = '';
+var newHeight = '100';
+
+$(window).bind('scroll', function() {
+  scrollTop = $( window ).scrollTop();
+  newHeight = scrollTop + 100;
+});
+
+$('.popup-trigger').click(function(e) {
+  document.body.style.overflow = "hidden";
+  e.stopPropagation();
+    $('.popup').after('<div class="page-cover"></div>');
+    $('.popups').hide();
+    $(this).nextAll('.popup:first').removeClass('popup-mobile').css('top', newHeight).toggle();
+});
+
+$('html, .popup-btn-close').click(function(e) {
+  document.body.style.overflow = "visible";
+  $('.popup').hide();
+  $('.page-cover').detach();
+});
+
+$('.popup').click(function(e){
+  e.stopPropagation();
+});
 </script>
 
 </html>

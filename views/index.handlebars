@@ -27,7 +27,7 @@
                                 <div>
                                     <li><a href="friend"><img class="nav-icon" src="images/Profile Icon.png"></a></li>
                                     <li><a class="active" href="/"><img class="nav-icon" src="images/Feed Icon.png"></a></li>
-                                    <li><a href="map"><img class="nav-icon" src="images/Map Icon.png"></a></li>
+                                    <li><a href="start_adventure"><img class="nav-icon" src="images/Map Icon.png"></a></li>
                                     <li><a href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a></li>
                                     <li><button class="hamburger">&#9776;</button>
                                     </li>
@@ -39,21 +39,21 @@
                 <div style="position: relative;">
                     <div class="menu">
                         <ul>
-                            <a href="https://a6-adventure-you.herokuapp.com/login">
-                                <li>Log Out</li>
-                            </a>
-                            <a href="https://a6-adventure-you.herokuapp.com/friend">
-                                <li>Create an Adventure</li>
-                            </a>
-                            <a href="https://a6-adventure-you.herokuapp.com/">
-                                <li>Newsfeed</li>
-                            </a>
-                            <a href="https://a6-adventure-you.herokuapp.com/map">
-                                <li>Hotspots</li>
-                            </a>
-                            <a href="https://a6-adventure-you.herokuapp.com/bucket">
-                                <li>Bucket List</li>
-                            </a>
+                          <a href="login">
+                              <li>Log Out</li>
+                          </a>
+                          <a href="friend">
+                              <li>Create an Adventure</li>
+                          </a>
+                          <a href="/">
+                              <li>Newsfeed</li>
+                          </a>
+                          <a href="start_adventure">
+                              <li>Start Adventuring</li>
+                          </a>
+                          <a href="bucket">
+                              <li>Bucket List</li>
+                          </a>
                         </ul>
                     </div>
                 </div>
@@ -108,8 +108,8 @@
             var e = $(this).parent().parent().children().children('#startingLoc').text();
             var f = $(this).parent().parent().children().children('#endingLoc').text();
             var g = $(this).parent().parent().children().children('#theme').text();
-            
-            var z = b + c; 
+
+            var z = b + c;
             $.get("buckets", {picture: a, date: z, description: d, startingLoc: e, endingLoc: f, theme: g});
         });
         $('.img-layout').click(function() {
@@ -131,9 +131,9 @@
             },
             function(isConfirm) {
                 if(isConfirm) {
-                    window.location.replace("https://a6-adventure-you.herokuapp.com/bucket");
+                    window.location.replace("bucket");
                 }else {
-                    window.location.replace("https://a6-adventure-you.herokuapp.com/");
+                    window.location.replace("/");
                 }
             });
         }

@@ -21,7 +21,6 @@ module.exports = {
             //res.write('received upload:\n\n');
             res.location('/friend');
             res.redirect('/friend');
-            //res.render('bucket',data);
             res.end(util.inspect({
                 fields: fields,
                 files: files
@@ -31,8 +30,7 @@ module.exports = {
 
         form.on('end', function(fields, files) {
             pic = this.openedFiles[0].name;
-
-            data.bucketlist.push({
+            data.bucketlist.unshift({
                 "title": title,
                 "date": date,
                 "theme": theme,
