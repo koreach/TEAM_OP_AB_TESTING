@@ -17,5 +17,6 @@ exports.addToBucket = function(req, res) {
   				endingLoc: req.query.endingLoc,
   				theme: req.query.theme
   			};
-  	res.render('bucket',buckets); buckets.bucketlist.push(buc);
+  	res.render('bucket',buckets);
+    buckets.bucketlist.unshift(buc);
 };

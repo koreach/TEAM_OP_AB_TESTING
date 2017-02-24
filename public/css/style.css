@@ -451,3 +451,28 @@ nav .active {
 .login-page a p.forgotpw {
     color: #414a59;
 }
+
+/***** start adventuring page  ******/
+.clicked {
+	background-color: red;
+	text-align: center;
+	width: 100%;
+	bottom: 0px;
+	padding-top: 5px;
+	font-size: 1.5em;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.adventurestatus {
+		background-color: #77dd77;
+		text-align: center;
+		width: 100%;
+		bottom: 0px;
+		padding-top: 5px;
+		font-size: 1.5em;
+	  color: #fff;
+	  text-decoration: none;
+	  cursor: pointer;
+}

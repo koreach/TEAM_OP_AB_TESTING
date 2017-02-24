@@ -1,0 +1,140 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>ADVENTURE YOU</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/bootstrap.css"></link>
+	<link rel="stylesheet" href="css/bootstrap-theme.css"></link>
+	<link rel="stylesheet" href="css/style.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 83%;    
+       margin: 0;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+
+      }
+    </style>
+</head>
+<header>
+    <div id="header">
+            <div class="container">
+                <div>
+                    <div class="title">
+                        <a href="/"><img class="adventureyou" src="images/ADVENTURE YOU.png"></a>
+                    </div>
+                    <div>
+                        <nav>
+                            <ul>
+                                <div class="navbar-menu">
+                                    <li><a href="friend"><img class="nav-icon" src="images/Profile Icon.png"></a></li>
+                                    <li><a href="/"><img class="nav-icon" src="images/Feed Icon.png"></a></li>
+                                    <li><a class="active" href="map"><img class="nav-icon" src="images/Map Icon.png"></a></li>
+                                    <li><a href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a></li>
+                                    <li><button class="hamburger">&#9776;</button>
+                                    </li>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <div class="menu">
+                        <ul>
+                            <a href="https://a6-adventure-you.herokuapp.com/login">
+                                <li>Log Out</li>
+                            </a>
+                            <a href="https://a6-adventure-you.herokuapp.com/friend">
+                                <li>Create an Adventure</li>
+                            </a>
+                            <a href="https://a6-adventure-you.herokuapp.com/">
+                                <li>Newsfeed</li>
+                            </a>
+                            <a href="https://a6-adventure-you.herokuapp.com/map">
+                                <li>Hotspots</li>
+                            </a>
+                            <a href="https://a6-adventure-you.herokuapp.com/bucket">
+                                <li>Bucket List</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+<body>
+  
+	<div class="container" id="map" style="margin: 0 auto"></div>
+    
+
+</body>
+
+<script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 13,
+          mapTypeId: 'roadmap',
+          gestureHandling: 'cooperative'
+        });
+
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.'); 
+            map.setCenter(pos);
+            
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      
+        
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZpg_bVsT3SSXiLO--lZS0a_lcWwJj0Qg&callback=initMap">
+    </script> 
+<script src="js/main.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</html>
+
