@@ -50,7 +50,9 @@ app.use(bodyParser.json());
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
-mongoose.connect("mongodb://localhost/myapp");
+//configuration
+mongoose.connect("mongodb://teamop:teamop170@olympia.modulusmongo.net:27017/quB6uvyz");
+
 var UserSchema = new mongoose.Schema({
     username: String,
     password: String,
