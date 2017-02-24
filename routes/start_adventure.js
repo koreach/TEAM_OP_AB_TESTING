@@ -1,3 +1,7 @@
 exports.view = function(req, res){
-  res.render('start_adventure');
+  	if (req.session.user) {
+        res.render('start_adventure');
+    } else {
+        res.redirect("/login");
+    }
 };

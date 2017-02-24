@@ -382,7 +382,6 @@ nav .active {
     padding: 120px 0;
     text-align: center;
 }
-@media screen and (max-width: 768px) { .login-page .container{ margin-top: -80px;} }
 
 
 .login-page .title h1 {
@@ -435,6 +434,15 @@ nav .active {
     height: 50px;
     margin: 30px 0;
 }
+.login-form input[type="text"] {
+    width: 100%;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 3px;
+    height: 50px;
+    border: 2px solid #414a59;
+}
+
 .login-form .login-btn {
     padding: 10px 0;
     background: #414a59;

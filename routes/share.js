@@ -1,3 +1,7 @@
 exports.view = function(req, res){
-  res.render('share');
+  	if (req.session.user) {
+        res.render('/share');
+    } else {
+        res.render("/login");
+    }
 };

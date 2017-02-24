@@ -13,60 +13,55 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
     <style>
-
     </style>
     <header>
         <div id="header">
-            <div class="container">
-                <div>
-                    <div class="title">
-                        <img class="adventureyou" src="images/ADVENTURE YOU.png">
-                    </div>
-            </div>
-        </div>
-    </header>
-    
-    <body onLoad="window.scroll(0, 150)">
-        <section id="login">
-    <div class="login-page">
         <div class="container">
-            <div class="col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
-                <div class="login-page-wrap">
-                    <div class="title">
-                        <h1 data-barley="login_heading" data-barley-editor="simple">Create Your Account</h1>
-                        
-                        <form role="form"  accept-charset="utf-8">
-                            <p>
-                                
-                            </p>
-                            <div class="login-form">
-                                <p>
-                                    <label for="email" class="sr-only" data-barley="login_label_email" data-barley-editor="simple">Full Name</label>
-                                    <input type="email" name="email" class="form-control input-lg" placeholder="FULL NAME">
-                                </p>
-                                <p>
-                                    <label for="email" class="sr-only" data-barley="login_label_email" data-barley-editor="simple">Email Address</label>
-                                    <input type="email" name="email" class="form-control input-lg" placeholder="EMAIL ADDRESS">
-                                </p>
-                                <p>
-                                    <label for="password" class="sr-only" data-barley="login_label_password" data-barley-editor="simple">Password</label>
-                                    <input type="password" class="form-control input-lg" id="inputPassword" name="password" placeholder="PASSWORD">
-                                </p>
-                                <a href ="https://a6-adventure-you.herokuapp.com/">
-                                    <input type="button" class="login-btn" data-barley="login_submit_btn" data-barley-editor="simple" value="SIGN UP" />
-                                </a>
-                            </div>
-                        </form>
-                        
-                    </div>
+            <div>
+                <div class="title">
+                    <img class="adventureyou" src="images/ADVENTURE YOU.png">
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
+    <body onLoad="window.scroll(0, 120)">
+        <section id="login">
+            <div class="login-page">
+                <div class="container">
+                    <div class="col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+                        <div class="login-page-wrap">
+                            <div class="title">
+                                <h1 data-barley="login_heading" data-barley-editor="simple">Create Your Account</h1>
+                                <form role="form" method="post" accept-charset="utf-8" action="/createlogin">
+                                    <p>
+                                    </p>
+                                    <div class="login-form">
+                                        <p style="width: 49%; float: left">
+                                            <label for="name" class="sr-only" data-barley-editor="simple">First Name</label>
+                                            <input type="text" name="name" class="form-control input-lg" placeholder="FIRST NAME">
+                                        </p>
+                                        <p style="width: 49%; float: right">
+                                            <label for="name" class="sr-only" data-barley-editor="simple">Last Name</label>
+                                            <input type="text" name="name" class="form-control input-lg" placeholder="LAST NAME">
+                                        </p>
+                                        <p>
+                                            <label for="email" class="sr-only" data-barley="login_label_email" data-barley-editor="simple">Email Address</label>
+                                            <input type="email" name="username" class="form-control input-lg" placeholder="EMAIL ADDRESS">
+                                        </p>
+                                        <p>
+                                            <label for="password" class="sr-only" data-barley="login_label_password" data-barley-editor="simple">Password</label>
+                                            <input type="password" class="form-control input-lg" id="inputPassword" name="password" placeholder="PASSWORD">
+                                        </p>
+                                        <input type="submit" class="login-btn" data-barley="login_submit_btn" data-barley-editor="simple" value="SIGN UP" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
-    
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
-    
 </html>

@@ -5,5 +5,9 @@
 var data = require('../index.json');
 
 exports.view = function(req, res){
-  res.render('index',data);
+  	if (req.session.user) {
+        res.render('index',data);
+    } else {
+        res.redirect("/login")
+    }
 };

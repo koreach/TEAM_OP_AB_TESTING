@@ -1,3 +1,7 @@
 exports.view = function(req, res){
-  res.render('friend');
+  	if (req.session.user) {
+        res.render('friend');
+    } else {
+        res.redirect("/login");
+    }
 };

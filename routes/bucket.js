@@ -6,8 +6,11 @@ exports.view = function(req, res){
 var buckets = require('../bucket.json');
 
 exports.view = function(req, res){
-
-  res.render('bucket',buckets);
+	if (req.session.user) {
+        res.render('bucket',buckets);
+    } else {
+        res.redirect("/login");
+    }
 };
 
 exports.addToBucket = function(req, res) {
