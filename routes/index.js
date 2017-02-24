@@ -6,7 +6,12 @@ exports.view = function(req, res){
 var feed = require("../index.json");
 
 exports.view = function(req, res){
-  res.render('index', feed);
+
+if (req.session.user) {
+    res.render('index',feed);
+} else {
+    res.redirect("/login")
+}
 };
 
 exports.addToFeed = function(req, res) {

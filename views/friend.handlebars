@@ -38,7 +38,7 @@
                 <div style="position: relative;">
                     <div class="menu">
                         <ul>
-                          <a href="login">
+                          <a href="/logout">
                               <li>Log Out</li>
                           </a>
                           <a href="friend">
@@ -61,8 +61,8 @@
     </header>
     <!--Actual start of the content-->
         <div class="container">
-            <h1>Create Your Own Adventure</h1>
-            <form action="/upload" enctype="multipart/form-data" method="post">
+            <h1 style="text-align: center">Create Your Own Adventure</h1>
+            <form action="/upload" enctype="multipart/form-data" method="post" style="margin: 0 20px">
                 <div class="form-group">
                     <label for="title">Title</label>
                     <input type="text" class="form-control" id="title" placeholder="Title" name="title" required>
@@ -74,6 +74,10 @@
                 <div class="form-group">
                     <label for="Theme">Theme</label>
                     <input type="text" class="form-control" id="theme" placeholder="Theme" name="theme" required>
+                </div>
+                <div class="form-group">
+                    <label for="Theme">Description</label>
+                    <input type="text" class="form-control" id="theme" placeholder="Description" name="description" required>
                 </div>
                 <div class="form-group">
                     <label for="StartingLoc">Starting Location</label>

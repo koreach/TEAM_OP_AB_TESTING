@@ -1,3 +1,7 @@
 exports.view = function(req, res){
-  res.render('map');
+  	if (req.session.user) {
+        res.render('/map');
+    } else {
+        res.render("/login");
+    }
 };

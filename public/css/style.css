@@ -277,9 +277,11 @@ nav .active {
 	display: block;
 }
 
+
 .overlayimg {
 		border-radius: 5px;
 	  width: 100%;
+    max-height: 380px;
 }
 
 .popup-trigger:hover {
@@ -290,12 +292,12 @@ nav .active {
 .popup {
 	display: none;
 	position: fixed;
-	top: 100px;
-	margin: 70px auto;
+	top: 50px;
+	margin: 0px auto;
 	left: 20%;
 	right: 20%;
 	width: 700px;
-  padding: 20px;
+  padding: 5px;
 	border-radius: 5px;
 	background: #fff;
 	font-size: 19px;
@@ -315,9 +317,9 @@ nav .active {
 }
 
 @media screen and (max-width: 768px){ .popup{
-	top: 100px!important;
+	top: 60px!important;
 	left: 0!important;
-	margin: 30px 0 0!important;
+	margin: 0 0 0!important;
 	width: 100%!important;}
 }
 
@@ -359,7 +361,7 @@ nav .active {
   border-radius: 5px;
   width: 90%;
   position: relative;
-  transition: all 0.5s ease-in-out;
+  transition: all 5.5s ease-in-out;
 }
 
 .popup h2 {
@@ -395,7 +397,6 @@ nav .active {
     padding: 120px 0;
     text-align: center;
 }
-@media screen and (max-width: 768px) { .login-page .container{ margin-top: -80px;} }
 
 
 .login-page .title h1 {
@@ -448,6 +449,15 @@ nav .active {
     height: 50px;
     margin: 30px 0;
 }
+.login-form input[type="text"] {
+    width: 100%;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 3px;
+    height: 50px;
+    border: 2px solid #414a59;
+}
+
 .login-form .login-btn {
     padding: 10px 0;
     background: #414a59;

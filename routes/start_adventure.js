@@ -6,7 +6,11 @@ exports.view = function(req, res){
 var adventures = require("../start_adventure.json");
 
 exports.view = function(req, res){
-  res.render('start_adventure', adventures);
+  if (req.session.user) {
+      res.render('start_adventure', adventures);
+  } else {
+      res.redirect("/login");
+  }
 };
 
 exports.addToAdventure = function(req, res) {
@@ -19,4 +23,5 @@ exports.addToAdventure = function(req, res) {
   			};
   	res.render('start_adventure',adventures);
     adventures.adventure.push(adv);
+
 };
