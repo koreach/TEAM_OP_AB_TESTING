@@ -7,29 +7,29 @@
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 9vw;
-    text-align: center;
-    color: white;
-    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
-    background-color: #77dd77;
-    margin: 0;
-    padding: 0;
+	text-align: center;
+	color: white;
+	font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+	background-color: #77dd77;
+	margin: 0;
+	padding: 0;
 }
 
 #header .nav-icon {
-  position: relative;
-  width:  20px;
-  height: 20px;
+	position: relative;
+	width:  20px;
+	height: 20px;
 }
 
 .hamburger{
-  background:none;
-  color:#fff;
-  border:0;
-  font-size:1.5em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:1;
+	background:none;
+	color:#fff;
+	border:0;
+	font-size:1.5em;
+	font-weight:bold;
+	cursor:pointer;
+	outline:none;
+	z-index:1;
 }
 
 
@@ -41,64 +41,64 @@
 .menu a:hover{text-decoration:none; color:white;}
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #a2eaba;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #a2eaba;
 }
 
 nav a {
-    float: left;
-    width:20%;
-    text-align: center;
+	float: left;
+	width:20%;
+	text-align: center;
 }
 
 nav li button {
-    width: 20%;
-    color: white;
-    text-decoration: none;
-    transition: -webkit-transform, -moz-transform, transform 1.3s ease;
-    padding: 12px 0px;
+	width: 20%;
+	color: white;
+	text-decoration: none;
+	transition: -webkit-transform, -moz-transform, transform 1.3s ease;
+	padding: 12px 0px;
 }
 
 nav li button:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    width: 20%;
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	width: 20%;
 }
 
 nav li a{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    transition: -webkit-transform, -moz-transform, transform 1.3s ease;
-    padding: 16px 0px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	transition: -webkit-transform, -moz-transform, transform 1.3s ease;
+	padding: 16px 0px;
 
 }
 
 nav a:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    background-color: #77dd77;
-    width: 20%;
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	background-color: #77dd77;
+	width: 20%;
 }
 
 nav a:focus {
-    text-decoration: none;
-    color: white;
-		    background-color: #77dd77;
+	text-decoration: none;
+	color: white;
+	background-color: #77dd77;
 }
 /*d50a0a*/
 a:visited {
-    text-decoration: none;
-    color: white;
+	text-decoration: none;
+	color: white;
 }
 
 nav .active {
-    text-decoration: none;
-    color: white;
-    background-color: #77dd77;
+	text-decoration: none;
+	color: white;
+	background-color: #77dd77;
 }
 
 .monthDateContainer {float: left; width:18%; margin:5px 10px 0 5px; border:0px solid #808080; background-color:#FFF; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
@@ -108,52 +108,52 @@ nav .active {
 /*  Index/Home */
 @media screen and (max-width: 768px) { .feed-box { margin:0 !important; padding: 0 !important } }
 .feed-info {
-    padding-top: 10px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
+	padding-top: 10px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
 }
 
 .prof-pic {
-    border-radius: 50%;
-    margin-right: 7px;
-    width: 50px;
-    height: 50px;
+	border-radius: 50%;
+	margin-right: 7px;
+	width: 50px;
+	height: 50px;
 }
 
 .img-layout {
-    clear: both;
-    text-align: center;
+	clear: both;
+	text-align: center;
 }
 
 .img-layout .picture {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding-top: 5px;
-    width: 540px;
-    position: relative;
-    color:#fff;
-    opacity: 1;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 5px;
+	width: 540px;
+	position: relative;
+	color:#fff;
+	opacity: 1;
 }
 @media screen and (min-width: 768px) { .img-layout .description { top: 85px !important; padding-left: 15 !important; padding-right: 45px !important; } }
 .img-layout .description {
-    position: absolute;
-    top: 75px;
-    display: none;
-    width: 100%;
-    height: 65%;
+	position: absolute;
+	top: 75px;
+	display: none;
+	width: 100%;
+	height: 65%;
 }
 @media screen and (min-width: 768px) { .img-layout .description p { font-size: 15px !important; } }
 
 .img-layout .description p{
-    font-size: 1.1em;
+	font-size: 1.1em;
 
-    /*height: 70%;
-    overflow: hidden;*/
+	/*height: 70%;
+	overflow: hidden;*/
 }
 .img-layout .nav-icon {
-    width: 50%;
+	width: 50%;
 
 }
 
@@ -162,26 +162,26 @@ nav .active {
 @media screen and (max-width: 768px) { .bucket-block .right-block p { font-size: 3.3vw !important; } }
 
 .align-element {
-		margin-top: 15px;
+	margin-top: 15px;
 }
 
 .pic {
-  max-width: 100%;
+	max-width: 100%;
 	width: 540px;
-  height: 250px;
-  position: relative;
+	height: 250px;
+	position: relative;
 }
 
 .bucket_text {
-  top: 0px;
+	top: 0px;
 }
 
 .bucket-block .bucket_text {
-  z-index: 1;
-  position: absolute;
-  color: white;
-  font-size: 2em;
-  font-weight: bold;
+	z-index: 1;
+	position: absolute;
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
 	text-indent: 40px;
 	line-height: 3;
 	text-shadow:
@@ -201,59 +201,59 @@ nav .active {
 }
 
 .adventureyou {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-bottom: 20px;
-  position: relative;
-  display:block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-bottom: 20px;
+	position: relative;
+	display:block;
 }
 
 .bucket-loc {
-    font-family: "Arial Narrow",Arial,sans-serif;
-    font-size: 0.8em  !important;
+	font-family: "Arial Narrow",Arial,sans-serif;
+	font-size: 0.8em  !important;
 }
 
 .new-adventure {
-    background-color: #77dd77;
-    text-align: center;
-    text-transform: uppercase;
-		margin-top: 15px;
-    color: white;
+	background-color: #77dd77;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 15px;
+	color: white;
 }
 
 .new-adventure h4{
-    display: inline-block;
-		color: white;
+	display: inline-block;
+	color: white;
 }
 @media screen and (max-width: 768px) { #bucket .left-pic .left-element{ width: 100% !important; height: auto !important; padding-right: 0 !important; padding-left: 0 !important;} }
 
 #bucket .left-pic  {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 @media screen and (max-width: 768px) { #bucket .right-pic .right-element{ width: 100% !important; height: auto !important; padding-right: 0 !important; padding-left: 0 !important;} }
 
 #bucket .right-pic {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 /*************************End of Bucket****************************************/
 
 
 /*************************Bucket-Popup window**********************************/
 .box {
-  width: 100%;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  padding: 35px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.2);
+	padding: 35px;
+	border: 2px solid #fff;
+	border-radius: 20px/50px;
+	background-clip: padding-box;
+	text-align: center;
 
 }
 
@@ -270,18 +270,18 @@ nav .active {
 	bottom: 0px;
 	padding-top: 5px;
 	font-size: 1.5em;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
 	display: block;
 }
 
 
 .overlayimg {
-		border-radius: 5px;
-	  width: 100%;
-    max-height: 380px;
+	border-radius: 5px;
+	width: 100%;
+	max-height: 380px;
 }
 
 .popup-trigger:hover {
@@ -297,7 +297,7 @@ nav .active {
 	left: 20%;
 	right: 20%;
 	width: 700px;
-  padding: 5px;
+	padding: 5px;
 	border-radius: 5px;
 	background: #fff;
 	font-size: 19px;
@@ -306,14 +306,14 @@ nav .active {
 }
 
 .page-cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.3;
-  z-index: 9998;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.3;
+	z-index: 9998;
 }
 
 @media screen and (max-width: 768px){ .popup{
@@ -329,6 +329,7 @@ nav .active {
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
+	display:block;
 }
 .popup-btn-share {
 	color: #4EBD79;
@@ -336,6 +337,7 @@ nav .active {
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
+	display:block;
 }
 .popup-btn-start {
 	color: #4EBD79;
@@ -343,136 +345,137 @@ nav .active {
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
+	display:block;
 }
 
 .popup-btn-close .close:hover {
-  color: #06D85F;
+	color: #06D85F;
 }
 
 .popup .content {
-  max-height: 30%;
-  overflow: auto;
+	max-height: 30%;
+	overflow: auto;
 }
 
 .popups {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 90%;
-  position: relative;
-  transition: all 5.5s ease-in-out;
+	margin: 70px auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	width: 90%;
+	position: relative;
+	transition: all 5.5s ease-in-out;
 }
 
 .popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
 }
 
 
 
 
 @media screen and (max-width: 700px){
-  .box{
-    width: 100%;
-  }
-  .popups{
-    width: 100%;
-  }
+	.box{
+		width: 100%;
+	}
+	.popups{
+		width: 100%;
+	}
 }
 
 
 /***** Log In ******/
 #login {
-  background-image: url('../images/City Lights.png');
-    width: 100%;
-    height: 1000px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: initial;
+	background-image: url('../images/City Lights.png');
+	width: 100%;
+	height: 1000px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: initial;
 
 }
 .login-page {
-    padding: 120px 0;
-    text-align: center;
+	padding: 120px 0;
+	text-align: center;
 }
 
 
 .login-page .title h1 {
-    color: #414a59;
-    text-align: center;
-    font-size: 50px;
-    padding: 30px 0;
+	color: #414a59;
+	text-align: center;
+	font-size: 50px;
+	padding: 30px 0;
 }
 .login-page a:link,
 .login-page a:active,
 .login-page a:visited,
 .login-page a:focus{
-  color: #414a59;
-    text-decoration: underline;
+	color: #414a59;
+	text-decoration: underline;
 }
 .login-page .form-error {
-    background: #fdf0da;
-    padding: 15px 15px;
-    border: 1px dotted #eb3c2d;
-    height: 50px;
-    margin-bottom: 30px;
+	background: #fdf0da;
+	padding: 15px 15px;
+	border: 1px dotted #eb3c2d;
+	height: 50px;
+	margin-bottom: 30px;
 }
 .login-page .form-error p {
-    color: #eb3c2d;
-    margin: 0;
+	color: #eb3c2d;
+	margin: 0;
 }
 .login-page-wrap {
-  border: 3px solid #414a59;
-    padding: 0px 15px 30px 15px;
-    background-color: white;
-    outline: 4px solid #fff;
+	border: 3px solid #414a59;
+	padding: 0px 15px 30px 15px;
+	background-color: white;
+	outline: 4px solid #fff;
 }
 .login-form {
-    margin: 30px 0;
+	margin: 30px 0;
 }
 .login-form input[type="email"] {
-    width: 100%;
-    border: 0;
-    padding: 10px 15px;
-    border-radius: 3px;
-    height: 50px;
-    border: 2px solid #414a59;
+	width: 100%;
+	border: 0;
+	padding: 10px 15px;
+	border-radius: 3px;
+	height: 50px;
+	border: 2px solid #414a59;
 }
 .login-form input[type="password"] {
-    width: 100%;
-    border: 0;
-    padding: 10px 15px;
-    border-radius: 3px;
-    border: 2px solid #414a59;
-    height: 50px;
-    margin: 30px 0;
+	width: 100%;
+	border: 0;
+	padding: 10px 15px;
+	border-radius: 3px;
+	border: 2px solid #414a59;
+	height: 50px;
+	margin: 30px 0;
 }
 .login-form input[type="text"] {
-    width: 100%;
-    border: 0;
-    padding: 10px 15px;
-    border-radius: 3px;
-    height: 50px;
-    border: 2px solid #414a59;
+	width: 100%;
+	border: 0;
+	padding: 10px 15px;
+	border-radius: 3px;
+	height: 50px;
+	border: 2px solid #414a59;
 }
 
 .login-form .login-btn {
-    padding: 10px 0;
-    background: #414a59;
-    border-radius: 3px;
-    width: 100%;
-    height: 50px;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    border: 0;
-    margin: 0px 0;
+	padding: 10px 0;
+	background: #414a59;
+	border-radius: 3px;
+	width: 100%;
+	height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	border: 0;
+	margin: 0px 0;
 }
 .login-page a p.forgotpw {
-    color: #414a59;
+	color: #414a59;
 }
 
 /***** start adventuring page  ******/
@@ -493,9 +496,9 @@ nav .active {
 	text-align: left;
 	width: 100%;
 	bottom: 0px;
-  padding-top: 0px;
-  color: #fff;
-  text-decoration: none;
+	padding-top: 0px;
+	color: #fff;
+	text-decoration: none;
 }
 
 .adventure .adventurestatus {
@@ -509,8 +512,8 @@ nav .active {
 }
 
 .adventure .text-box {
-    padding-left: 0px;
-    padding-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .adventure h1 {
@@ -528,28 +531,110 @@ nav .active {
 }
 
 .adventure p1 {
-		font-size: 25px;
-	 	margin-bottom: 0px;
-		padding-left: 30px;
-	 }
+	font-size: 25px;
+	margin-bottom: 0px;
+	padding-left: 30px;
+}
 
- @media screen and (max-width: 768px)
- { .adventure h1 {font-size: 4.5vw!important; } }
+@media screen and (max-width: 768px)
+{ .adventure h1 {font-size: 4.5vw!important; } }
 
- @media screen and (max-width: 768px)
- { .adventure p {font-size: 3.2vw!important;} }
+@media screen and (max-width: 768px)
+{ .adventure p {font-size: 3.2vw!important;} }
 
- @media screen and (max-width: 768px)
- { .adventure p1 {font-size: 3.0vw!important;} }
+@media screen and (max-width: 768px)
+{ .adventure p1 {font-size: 3.0vw!important;} }
 
 .adventure .pictures {
-  max-width: 100%;
+	max-width: 100%;
 	width: 555px;
-  position: relative;
+	position: relative;
 }
 
 .adventure .stopbutton {
 	background-color: #77dd77;
-		color: #fff;
-		text-align: center;
+	color: #fff;
+	text-align: center;
 }
+#mimg {
+	background-image: url("../images/lajolla_beach.png");
+	width: 100%;
+	height: 1000px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: initial;
+	}}
+
+	.mtext {
+		position: absolute;
+		top: 200px;
+		left: 0;
+		width: 100%;
+	}
+
+	@media screen and (max-width: 768px)
+	{ .foo {
+		width: 60vw !important;
+		height: 80vw !important;
+		border: 1px solid rgba(0, 0, 0, .2) !important;
+		display: block !important;
+		margin-top: 20vw !important;
+		margin-right: auto;
+		margin-bottom: auto;
+		margin-left: auto;
+		}}
+
+		.foo {
+			width: 40vw;
+			height: 30vw;
+			border: 1px solid rgba(0, 0, 0, .2);
+			display: block;
+			margin-top: 5vw;
+			margin-right: auto;
+			margin-bottom: auto;
+			margin-left: auto;
+		}
+
+		.blue {
+			background-color: #ffffff;
+			opacity: 0.7;
+		}
+
+		div .foo h2 {
+			margin: 5%;
+			font-weight: bold;
+			color: #000000;
+			text-align: center;
+			margin-top: 20px
+		}
+
+		.foobutton {
+			color: white;
+			border: none;
+			box-shadow: none;
+			font-size: 4vw;
+			font-weight: 500;
+			border-radius: 5px;
+			padding: 10px 32px;
+			margin-top: 50px !important;
+			display: block;
+			margin: auto;
+			cursor: pointer;
+			background: green;
+		}
+
+		.foobutton2 {
+			background: green;
+			color: white;
+			border: none;
+			box-shadow: none;
+			font-size: 4vw;
+			font-weight: 500;
+			border-radius: 5px;
+			padding: 10px 32px;
+			display: block;
+			margin: auto;
+			margin-top: 10px !important;
+
+			cursor: pointer;
+		}

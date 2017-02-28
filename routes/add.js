@@ -7,9 +7,14 @@ var util = require('util');
 var bodyparser = require('body-parser');
 
 var title, date, theme, description, startingloc, endingloc, pic;
+var counter;
 module.exports = {
     upload: function(req, res) {
         var form = new formidable.IncomingForm();
+
+        counter = 0;
+
+        console.info("sds");
 
         form.parse(req, function(err, fields, files) {
             title = fields.title;

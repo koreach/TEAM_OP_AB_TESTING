@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
     </link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 </head>
 
 <header>
@@ -27,13 +29,13 @@
                         <ul>
                             <div class="navbar-menu">
                                 <li>
-                                    <a href="friend"><img class="nav-icon" src="images/Profile Icon.png"></a>
+                                    <a href="friend"><img class="nav-icon" src="images/Plus.png"></a>
                                 </li>
                                 <li>
                                     <a href="/"><img class="nav-icon" src="images/Feed Icon.png"></a>
                                 </li>
                                 <li>
-                                    <a href="start_adventure"><img class="nav-icon" src="images/Map Icon.png"></a>
+                                    <a href="start_adventure"><img class="nav-icon" src="images/Mountain.png"></a>
                                 </li>
                                 <li>
                                     <a class="active" href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a>
@@ -73,6 +75,20 @@
 
 <section id="bucket">
     <body>
+      <div id = "message">
+        <div id = "mimg" class="container">
+          <div class="foo blue">
+                <h2>Start Your Adventure Today!</h2>
+                <a href="friend">
+                  <button class="foobutton" formaction="friend">Create New Adventure</button>
+                </a>
+                <a href="/">
+                  <button class="foobutton2">Add New Adventure</button>
+                </a>
+          </div>
+        </div>
+    </div>
+
         <div class="container">
             {{#each bucketlist}}
               <div class="bucket-block">
@@ -91,9 +107,9 @@
                               <p>Ending Location:  <span id="endingLoc">{{endingLoc}}</span></p>
                               <p>Theme:<span id="theme">{{theme}}</span></p>
                           </div>
-                        <span class="popup-btn-close">close</span>
-                        <span class="popup-btn-share">share</span>
-                        <span class="popup-btn-start">start adventure</span>
+                        <div class="popup-btn-close">close</div>
+                        <div class="popup-btn-share" onclick="shared()">share</div>
+                        <div class="popup-btn-start" onclick="start()">start adventure</div>
                       </div>
                   </div>
               </div>
@@ -105,7 +121,52 @@
 <script src="js/main.js"></script>
 <script src="js/bootstrap.js"></script>
 
-<script>
+  <script type="text/javascript">
+function shared() {
+    swal({
+        title: "Shared to Feed!",
+       // text: "Here's my error message!",
+        type: "success",
+        showCancelButton: true,
+        cancelButtonText: "Go to feed",
+        confirmButtonText: "Keep looking at the Bucketlist",
+        closeOnConfirm: false,
+        closeOnCancel: false
+    },
+    function(isConfirm) {
+        if(isConfirm) {
+            window.location.replace("bucket");
+        }else {
+            window.location.replace("/");
+        }
+    });
+}
+
+function start() {
+    swal({
+        title: "Started a new adventure!!",
+       // text: "Here's my error message!",
+        type: "success",
+        showCancelButton: true,
+        cancelButtonText: "Head to the Adventures page",
+        confirmButtonText: "Keep looking at the Bucketlist",
+        closeOnConfirm: false,
+        closeOnCancel: false
+    },
+    function(isConfirm) {
+        if(isConfirm) {
+            window.location.replace("bucket");
+        }else {
+            window.location.replace("start_adventure");
+        }
+    });
+}
+
+$("#message").ready(function(){
+	if($('.bucket_text').length) {
+  	$("#message").hide();
+	}
+});
 
 //Add to start_adventure
 $('.popup-btn-start').click(function() {

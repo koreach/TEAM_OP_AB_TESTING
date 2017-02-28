@@ -9,127 +9,147 @@
 	<link rel="stylesheet" href="css/bootstrap.css"></link>
 	<link rel="stylesheet" href="css/bootstrap-theme.css"></link>
 	<link rel="stylesheet" href="css/style.css"></link>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 </head>
 
 <header>
-    <div id="header">
-            <div class="container">
-                <div>
-                    <div class="title">
-                        <a href="/"><img class="adventureyou" src="images/ADVENTURE YOU.png"></a>
-                    </div>
-                    <div>
-                        <nav>
-                            <ul>
-                                <div class="navbar-menu">
-                                    <li><a href="friend"><img class="nav-icon" src="images/Profile Icon.png"></a></li>
-                                    <li><a href="/"><img class="nav-icon" src="images/Feed Icon.png"></a></li>
-                                    <li><a class="active" href="start_adventure"><img class="nav-icon" src="images/Map Icon.png"></a></li>
-                                    <li><a href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a></li>
-                                    <li><button class="hamburger">&#9776;</button></li>
-                                </div>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div style="position: relative;">
-                        <div class="menu">
-                            <ul>
-															<a href="/logout">
-		                              <li>Log Out</li>
-		                          </a>
-		                          <a href="friend">
-		                              <li>Create an Adventure</li>
-		                          </a>
-		                          <a href="/">
-		                              <li>Newsfeed</li>
-		                          </a>
-		                          <a href="start_adventure">
-		                              <li>Start Adventuring</li>
-		                          </a>
-		                          <a href="bucket">
-		                              <li>Bucket List</li>
-		                          </a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+	<div id="header">
+		<div class="container">
+			<div>
+				<div class="title">
+					<a href="/"><img class="adventureyou" src="images/ADVENTURE YOU.png"></a>
+				</div>
+				<div>
+					<nav>
+						<ul>
+							<div class="navbar-menu">
+								<li><a href="friend"><img class="nav-icon" src="images/Plus.png"></a></li>
+								<li><a href="/"><img class="nav-icon" src="images/Feed Icon.png"></a></li>
+								<li><a class="active" href="start_adventure"><img class="nav-icon" src="images/Mountain.png"></a></li>
+								<li><a href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a></li>
+								<li><button class="hamburger">&#9776;</button></li>
+							</div>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div style="position: relative;">
+				<div class="menu">
+					<ul>
+						<a href="/logout">
+							<li>Log Out</li>
+						</a>
+						<a href="friend">
+							<li>Create an Adventure</li>
+						</a>
+						<a href="/">
+							<li>Newsfeed</li>
+						</a>
+						<a href="start_adventure">
+							<li>Start Adventuring</li>
+						</a>
+						<a href="bucket">
+							<li>Bucket List</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
 
-        <body>
-          <div class="adventure">
-                {{#each adventure}}
-								<div class="container">
-									<h1>Your current adventure</h1>
-	                <div class="col-md-6 col-sm-6 col-xs-6 align-element" style = "padding-right: 0px; !important">
-	                  <img class = "pictures" src = "{{picture}}">
-	                  <div class=" text-box col-md-12 col-sm-12 col-xs-12 align-element">
-	                      <div class = "adventures">
-	                        <p>Theme:</p>
-	                          <p1>{{theme}}</p1>
-	                        <p>Start:</p>
-	                          <p1>{{startingLoc}}</p1>
-	                        <p>End:</p>
-	                          <p1>{{endingLoc}}</p1>
-	                      </div>
-	                  </div>
-	                </div>
-	                <div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-	                    <div class = "adventurestatus"> {{startingLoc}} </div>
-	                </div>
-									<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-											<div class = "adventurestatus"> {{endingLoc}} </div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-											<div class = "adventurestatus"> {{startingLoc}} </div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-											<div class = "adventurestatus"> {{endingLoc}} </div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-											<div class = "adventurestatus"> {{startingLoc}} </div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-											<div class = "adventurestatus"> {{endingLoc}} </div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-											<div class = "adventurestatus"> {{endingLoc}} </div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-											<div class = "adventurestatus"> {{startingLoc}} </div>
-									</div>
-	                <div class="col-md-12 col-sm-12 col-xs-12 align-element" >
-	                <button class="stopbutton btn btn-lg"> Stop Adventure</button>
-	                </div>
-								</div>
-								{{/each}}
-          </div>
-        </body>
+<body>
+	<div id = "message">
+		<div id = "mimg" class="container">
+			<div class="foo blue">
+				<h2>Start Your Adventure Today!</h2>
+				<a href="friend">
+					<button class="foobutton" formaction="friend">Create New Adventure</button>
+				</a>
+				<a href="/">
+					<button class="foobutton2">Add New Adventure</button>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="adventure">
+		{{#each adventure}}
+		<div class="container" src = "count()">
+			<h1>Your current adventure</h1>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" style = "padding-right: 0px; !important">
+				<img class = "pictures" src = "{{picture}}">
+				<div class=" text-box col-md-12 col-sm-12 col-xs-12 align-element">
+					<div class = "adventures">
+						<p>Theme:</p>
+						<p1>{{theme}}</p1>
+						<p>Start:</p>
+						<p1>{{startingLoc}}</p1>
+						<p>End:</p>
+						<p1>{{endingLoc}}</p1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
+				<div class = "adventurestatus"> {{startingLoc}} </div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
+				<div class = "adventurestatus"> {{endingLoc}} </div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
+				<div class = "adventurestatus"> {{startingLoc}} </div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
+				<div class = "adventurestatus"> {{endingLoc}} </div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
+				<div class = "adventurestatus"> {{startingLoc}} </div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
+				<div class = "adventurestatus"> {{endingLoc}} </div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
+				<div class = "adventurestatus"> {{endingLoc}} </div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
+				<div class = "adventurestatus"> {{startingLoc}} </div>
+			</div>
+			<div class="col-md-12 col-sm-12 col-xs-12 align-element" >
+				<button class="stopbutton btn btn-lg"> Stop Adventure</button>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</body>
 
 <script src="js/main.js"></script>
 <script src="js/bootstrap.js"></script>
 
 <script>
 $(function() {
-    var colors = ["green","yellow","red"];
-    var index = 0;
-    $('.adventurestatus').click(function() {
-      if($(this).css("background-color") == "rgb(255, 0, 0)") {
-        $(this).css("background-color", 'yellow');
-      } else if($(this).css("background-color") == "rgb(255, 255, 0)") {
-        $(this).css("background-color", 'green');
-      } else {
-        $(this).css("background-color", 'red');
-      }
-    });
+	var colors = ["green","yellow","red"];
+	var index = 0;
+	$('.adventurestatus').click(function() {
+		if($(this).css("background-color") == "rgb(255, 0, 0)") {
+			$(this).css("background-color", 'yellow');
+		} else if($(this).css("background-color") == "rgb(255, 255, 0)") {
+			$(this).css("background-color", 'green');
+		} else {
+			$(this).css("background-color", 'red');
+		}
+	});
 })
 
 $('.stopbutton').click(function(e) {
-  document.body.style.overflow = "visible";
-  $('.adventure').hide();
+	document.body.style.overflow = "visible";
+	$('.adventure').hide();
+});
+
+$("#message").ready(function(){
+	if($('.adventurestatus').length) {
+		$("#message").hide();
+	}
 });
 </script>
 
