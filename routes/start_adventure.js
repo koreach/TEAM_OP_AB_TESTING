@@ -21,7 +21,11 @@ exports.addToAdventure = function(req, res) {
   				endingLoc: req.query.endingLoc,
   				theme: req.query.theme
   			};
+        console.log(adv);
   	res.render('start_adventure',adventures);
     adventures.adventure.push(adv);
+};
 
+exports.delTripDay = function() {
+  adventures.splice(index, 1); // then delete by index
 };

@@ -77,46 +77,51 @@
 	<div class="adventure">
 		{{#each adventure}}
 		<div class="container" src = "count()">
-			<h1>Your current adventure</h1>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" style = "padding-right: 0px; !important">
-				<img class = "pictures" src = "{{picture}}">
-				<div class=" text-box col-md-12 col-sm-12 col-xs-12 align-element">
+			<div class="col-md-6 col-sm-12 col-xs-12">
+				<img class = "pictures" src = "{{picture}}" style = "margin-top: 15px; !important">
+				<p2>Your Current Adventure</p2>
+				<div class=" text-box col-md-12 col-sm-12 col-xs-12">
+					<img src = "images/Color Fill 1.png" class ="stopbutton">
 					<div class = "adventures">
-						<p>Theme:</p>
-						<p1>{{theme}}</p1>
-						<p>Start:</p>
-						<p1>{{startingLoc}}</p1>
-						<p>End:</p>
-						<p1>{{endingLoc}}</p1>
+						<div class = "text">
+							<p>Theme:</p>
+							<p1>{{theme}}</p1>
+							<p>Start:</p>
+							<p1>{{startingLoc}}</p1>
+							<p>End:</p>
+							<p1>{{endingLoc}}</p1>
+							<p>Desctiption:</p>
+							<p1>This is something really cool that everyone should check out tbh</p1>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-				<div class = "adventurestatus"> {{startingLoc}} </div>
-			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-				<div class = "adventurestatus"> {{endingLoc}} </div>
-			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-				<div class = "adventurestatus"> {{startingLoc}} </div>
-			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-				<div class = "adventurestatus"> {{endingLoc}} </div>
-			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-				<div class = "adventurestatus"> {{startingLoc}} </div>
-			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-				<div class = "adventurestatus"> {{endingLoc}} </div>
-			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-				<div class = "adventurestatus"> {{endingLoc}} </div>
-			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 align-element" >
-				<div class = "adventurestatus"> {{startingLoc}} </div>
-			</div>
-			<div class="col-md-12 col-sm-12 col-xs-12 align-element" >
-				<button class="stopbutton btn btn-lg"> Stop Adventure</button>
+
+			<div class="col-md-6 col-sm-12 col-xs-12 align-element3" style="padding-left: 5px !important; padding-right: 5px !important;">
+				<div class="col-md-12 col-sm-12 col-xs-12 align-element3" >
+						<div class="visit"> Spots to Visit: </div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 align-element2" >
+					<div class = "adventurestatus"> {{startingLoc}} <img src = "images/no.png" class ="button"> </div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 align-element2" >
+					<div class = "adventurestatus"> {{startingLoc}} <img src = "images/no.png" class ="button"> </div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 align-element2" >
+					<div class = "adventurestatus"> {{startingLoc}} <img src = "images/no.png" class ="button"> </div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 align-element2" >
+					<div class = "adventurestatus"> {{startingLoc}} <img src = "images/no.png" class ="button"> </div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 align-element2" >
+					<div class = "adventurestatus"> {{startingLoc}} <img src = "images/no.png" class ="button"> </div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 align-element2" >
+					<div class = "adventurestatus"> {{startingLoc}} <img src = "images/no.png" class ="button"> </div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 align-element2" >
+					<div class = "adventurestatus"> {{startingLoc}} <img src = "images/no.png" class ="button"> </div>
+				</div>
 			</div>
 		</div>
 		{{/each}}
@@ -131,19 +136,24 @@ $(function() {
 	var colors = ["green","yellow","red"];
 	var index = 0;
 	$('.adventurestatus').click(function() {
-		if($(this).css("background-color") == "rgb(255, 0, 0)") {
-			$(this).css("background-color", 'yellow');
-		} else if($(this).css("background-color") == "rgb(255, 255, 0)") {
+		if($(this).css("background-color") == "rgb(202, 25, 41)") {
+			$(this).css("background-color", '#FECE24');
+			$(this).children().attr('src', "images/wait.png");
+		} else if($(this).css("background-color") == "rgb(254, 206, 36)") {
 			$(this).css("background-color", 'green');
+			$(this).children().attr('src', "images/yes.png");
 		} else {
-			$(this).css("background-color", 'red');
+			$(this).css("background-color", '#CA1929');
+			$(this).children().attr('src', "images/no.png");
 		}
 	});
 })
 
 $('.stopbutton').click(function(e) {
-	document.body.style.overflow = "visible";
-	$('.adventure').hide();
+	$.getJSON('start_adventure.json', function(data) {
+		console.log(data);
+  	delete data.adventure[1];
+	});
 });
 
 $("#message").ready(function(){

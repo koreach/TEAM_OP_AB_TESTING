@@ -161,13 +161,26 @@ nav .active {
 @media screen and (max-width: 768px) { .show { font-size: 3.7vw !important; padding-right: 0 !important;} }
 @media screen and (max-width: 768px) { .bucket-block .right-block p { font-size: 3.3vw !important; } }
 
+@media screen and (max-width: 768px) {.align-element3 {
+	margin-top: 6px !important;
+} }
+
 .align-element {
 	margin-top: 15px;
 }
 
+.align-element3 {
+	margin-top: 15px;
+}
+
+.align-element2 {
+	margin-top: 5px;
+	float:right;
+}
+
 .pic {
 	max-width: 100%;
-	width: 540px;
+	width: 703.6px;
 	height: 250px;
 	position: relative;
 }
@@ -492,7 +505,7 @@ nav .active {
 }
 
 .adventure .adventures {
-	background-color: #a2eaba;
+	background-color: #77dd77;
 	text-align: left;
 	width: 100%;
 	bottom: 0px;
@@ -501,14 +514,41 @@ nav .active {
 	text-decoration: none;
 }
 
+.adventure .text {
+	padding-left: 5px;
+}
+
+@media screen and (max-width: 768px)
+{ .adventure .adventurestatus {
+	height: 35px !important;
+	font-size: 4.0vw !important;
+}}
+
+
 .adventure .adventurestatus {
-	background-color: red;
-	text-align: center;;
+	background-color: #CA1929;
+	padding-left: 10px;
+	text-align: left;
+	height: 50px;
+	margin-top: 10px !important;
 	width: 100%;
 	color: #fff;
-	font-size: 3.0vw;
+	font-size: 1.5vw;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 768px)
+{ .adventure .visit {
+	font-size: 4.0vw !important;
+  top: -5px !important;
+}}
+
+.adventure .visit {
+	position: absolute;
+  top: -15px;
+	font-weight: bold;
+	font-size: 1.5vw;
 }
 
 .adventure .text-box {
@@ -523,17 +563,39 @@ nav .active {
 }
 
 .adventure p {
-	font-size: 34px;
+	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 0px;
 	line-height: 1.3;
-	padding-left: 5px;
+	padding-left: 0px;
 }
 
 .adventure p1 {
-	font-size: 25px;
+	font-size: 22px;
 	margin-bottom: 0px;
-	padding-left: 30px;
+	padding-left: 13px;
+}
+
+
+@media screen and (max-width: 768px)
+{ .adventure p2 {
+	font-size: 1.5em !important;
+	font-weight: bold !important;
+	text-indent: 13px !important;
+	top: 4px !important;
+} }
+
+
+.adventure p2 {
+	z-index: 1;
+	position: absolute;
+	color: white;
+	top: 0px;
+	font-size: 2em;
+	font-weight: bold;
+	text-indent: 20px;
+	line-height: 3;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 @media screen and (max-width: 768px)
@@ -547,15 +609,38 @@ nav .active {
 
 .adventure .pictures {
 	max-width: 100%;
-	width: 555px;
+	width: 738px;
 	position: relative;
 }
 
-.adventure .stopbutton {
-	background-color: #77dd77;
-	color: #fff;
-	text-align: center;
+@media screen and (max-width: 768px)
+{ .adventure .button {
+	max-width: 7% !important;
+}}
+
+.adventure .button {
+	position: absolute;
+	margin: auto;
+	max-width: 8%;
+	top: 10px;
+	right: 20px;
+	bottom: 0;
 }
+
+/**catered to mobile**/
+@media screen and (max-width: 768px)
+{ .adventure .stopbutton {
+	bottom: 86% !important;
+}}
+
+.adventure .stopbutton {
+	max-width: 14%;
+	position: absolute;
+	z-index: 10;
+	bottom: 90%;
+	right: 3%
+}
+
 #mimg {
 	background-image: url("../images/lajolla_beach.png");
 	width: 100%;
@@ -563,78 +648,97 @@ nav .active {
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow: initial;
-	}}
+}
 
-	.mtext {
-		position: absolute;
-		top: 200px;
-		left: 0;
-		width: 100%;
-	}
+.mtext {
+	position: absolute;
+	top: 200px;
+	left: 0;
+	width: 100%;
+}
 
-	@media screen and (max-width: 768px)
-	{ .foo {
-		width: 60vw !important;
-		height: 80vw !important;
-		border: 1px solid rgba(0, 0, 0, .2) !important;
-		display: block !important;
-		margin-top: 20vw !important;
+@media screen and (max-width: 768px)
+{ .foo {
+	width: 60vw !important;
+	height: 80vw !important;
+	border: 1px solid rgba(0, 0, 0, .2) !important;
+	display: block !important;
+	margin-top: 20vw !important;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}}
+
+
+@media screen and (max-width: 768px)
+{
+	.foo {
+		font-size: 4vw !important;
+}}
+
+	.foo {
+		width: 40vw;
+		height: 30vw;
+		border: 1px solid rgba(0, 0, 0, .2);
+		display: block;
+		margin-top: 5vw;
 		margin-right: auto;
 		margin-bottom: auto;
 		margin-left: auto;
-		}}
+	}
 
-		.foo {
-			width: 40vw;
-			height: 30vw;
-			border: 1px solid rgba(0, 0, 0, .2);
-			display: block;
-			margin-top: 5vw;
-			margin-right: auto;
-			margin-bottom: auto;
-			margin-left: auto;
-		}
+	.blue {
+		background-color: #ffffff;
+		opacity: 0.7;
+	}
 
-		.blue {
-			background-color: #ffffff;
-			opacity: 0.7;
-		}
+	div .foo h2 {
+		margin: 5%;
+		font-weight: bold;
+		color: #000000;
+		text-align: center;
+		margin-top: 20px
+	}
 
-		div .foo h2 {
-			margin: 5%;
-			font-weight: bold;
-			color: #000000;
-			text-align: center;
-			margin-top: 20px
-		}
-
+	@media screen and (max-width: 768px)
+	{
 		.foobutton {
-			color: white;
-			border: none;
-			box-shadow: none;
-			font-size: 4vw;
-			font-weight: 500;
-			border-radius: 5px;
-			padding: 10px 32px;
-			margin-top: 50px !important;
-			display: block;
-			margin: auto;
-			cursor: pointer;
-			background: green;
-		}
+			font-size: 4vw !important;
+	}}
 
-		.foobutton2 {
-			background: green;
-			color: white;
-			border: none;
-			box-shadow: none;
-			font-size: 4vw;
-			font-weight: 500;
-			border-radius: 5px;
-			padding: 10px 32px;
-			display: block;
-			margin: auto;
-			margin-top: 10px !important;
+	@media screen and (max-width: 768px)
+	{
+		.foobutton2  {
+			font-size: 4vw !important;
+	}}
 
-			cursor: pointer;
-		}
+	.foobutton {
+		color: white;
+		border: none;
+		box-shadow: none;
+		font-size: 2.5vw;
+		font-weight: 500;
+		border-radius: 5px;
+		padding: 10px 32px;
+		margin-top: 50px !important;
+		display: block;
+		margin: auto;
+		cursor: pointer;
+		background: green;
+	}
+
+	.foobutton2 {
+		background: green;
+		color: white;
+		border: none;
+		box-shadow: none;
+		font-size: 2.5vw;
+		font-weight: 500;
+		border-radius: 5px;
+		padding: 10px 32px;
+		display: block;
+		margin: auto;
+		margin-top: 10px !important;
+
+		cursor: pointer;
+	}
