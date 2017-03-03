@@ -130,30 +130,41 @@ nav .active {
 	max-width: 100%;
 	height: auto;
 	margin: 0 auto;
-	padding-top: 5px;
-	width: 540px;
+	width: 720px;
 	position: relative;
-	color:#fff;
-	opacity: 1;
+	color:black;
 }
-@media screen and (min-width: 768px) { .img-layout .description { top: 85px !important; padding-left: 15 !important; padding-right: 45px !important; } }
+
 .img-layout .description {
 	position: absolute;
+	padding-top: 20px;
 	top: 75px;
+	padding-right: 40px;
 	display: none;
+	color:#fff;
 	width: 100%;
 	height: 65%;
 }
+
+@media screen and (max-width: 768px) {.img-layout .description {
+		font-size: 3vw !important;
+		padding-right: 15px !important;
+}}
+
 @media screen and (min-width: 768px) { .img-layout .description p { font-size: 15px !important; } }
 
 .img-layout .description p{
-	font-size: 1.1em;
-
+	font-size: 3vw;
+	text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 	/*height: 70%;
 	overflow: hidden;*/
 }
 .img-layout .nav-icon {
-	width: 50%;
+	width: 40%;
 
 }
 
@@ -305,7 +316,7 @@ nav .active {
 .popup {
 	display: none;
 	position: fixed;
-	top: 50px;
+	top: 50px !important;
 	margin: 0px auto;
 	left: 20%;
 	right: 20%;
@@ -318,6 +329,14 @@ nav .active {
 	z-index: 9999;
 }
 
+@media screen and (max-width: 768px){ .popup{
+	top: 60px!important;
+	left: 0!important;
+	margin: 0 0 0!important;
+	width: 100%!important;}
+}
+
+
 .page-cover {
 	position: fixed;
 	top: 0;
@@ -329,12 +348,6 @@ nav .active {
 	z-index: 9998;
 }
 
-@media screen and (max-width: 768px){ .popup{
-	top: 60px!important;
-	left: 0!important;
-	margin: 0 0 0!important;
-	width: 100%!important;}
-}
 
 .popup-btn-close {
 	color: #4EBD79;
@@ -579,10 +592,10 @@ nav .active {
 
 @media screen and (max-width: 768px)
 { .adventure p2 {
-	font-size: 1.5em !important;
+	font-size: 5vw !important;
 	font-weight: bold !important;
 	text-indent: 13px !important;
-	top: 4px !important;
+	top: 10px !important;
 } }
 
 
