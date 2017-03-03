@@ -1,6 +1,6 @@
 var data = require('../index.json');
 exports.view = function(req, res){
-  res.render('index', data);
+  res.render('page_A', data);
 };
 
 var feed = require("../index.json");
@@ -8,7 +8,7 @@ var feed = require("../index.json");
 exports.view = function(req, res){
 
 if (req.session.user) {
-    res.render('index',feed);
+    res.render('page_A',feed);
 } else {
     res.redirect("/login")
 }
@@ -23,6 +23,6 @@ exports.addToFeed = function(req, res) {
   				endingLoc: req.query.endingLoc,
   				theme: req.query.theme
   			};
-    res.render('index', feed);
+    res.render('page_A', feed);
     feed.feed_object.unshift(a);
 };

@@ -12,7 +12,9 @@ var fs = require('fs-extra');
 var qt = require('quickthumb');
 var hash = require('./pass').hash;
 
-var index = require('./routes/index');
+var page_A = require('./routes/page_A');
+var page_B = require('./routes/page_B');
+
 var bucket = require('./routes/bucket');
 var friend = require('./routes/friend');
 //var map = require('./routes/map');
@@ -66,8 +68,11 @@ app.use(express.cookieParser('Authentication Tutorial '));
     app.use(express.session());
 
 // Add routes here
-app.get('/', index.view);
-app.get('/feed', index.addToFeed);
+app.get('/page_A', page_A.view);
+app.get('/page_B', page_B.view)
+app.get('/feed', page_B.addToFeed);
+app.get('/feed', page_A.addToFeed);
+
 
 app.get('/bucket', bucket.view);
 app.get('/buckets', bucket.addToBucket);
@@ -126,14 +131,14 @@ app.post("/createlogin", userExist, function (req, res) {
 
 app.post("/login", function (req, res) {
     authenticate(req.body.username, req.body.password, function (err, user) {
-       
+
         if (user) {
 
             req.session.regenerate(function () {
                 //  console.log(user);
                 req.session.user = user;
                 req.session.success = 'Authenticated as ' + user.username + ' click to <a href="/logout">logout</a>. ' + ' You may now access <a href="/restricted">/restricted</a>.';
-                res.redirect('/');
+                res.redirect('/page_B');
             });
         } else {
             req.session.error = 'Authentication failed, please check your ' + ' username and password.';
@@ -143,7 +148,7 @@ app.post("/login", function (req, res) {
 });
 
 app.get('/logout', function (req, res) {
-    req.session.destroy(function () { 
+    req.session.destroy(function () {
         res.redirect('/');
     });
 });
