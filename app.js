@@ -13,6 +13,8 @@ var hash = require('./pass').hash;
 
 var page_A = require('./routes/page_A');
 var page_B = require('./routes/page_B');
+var index = require('./routes/index');
+
 
 var bucket = require('./routes/bucket');
 var friend = require('./routes/friend');
@@ -67,6 +69,7 @@ app.use(express.cookieParser('Authentication Tutorial '));
     app.use(express.session());
 
 // Add routes here
+app.get('/', index.view);
 app.get('/page_A', page_A.view);
 app.get('/page_B', page_B.view)
 app.get('/feed', page_B.addToFeed);
@@ -76,7 +79,7 @@ app.get('/feed', page_A.addToFeed);
 app.get('/bucket', bucket.view);
 app.get('/buckets', bucket.addToBucket);
 
-app.get('/', friend.view);
+app.get('/friend', friend.view);
 app.get('/adventure', adventure.view);
 app.get('/login', login.view);
 app.get('/createlogin', createlogin.view);

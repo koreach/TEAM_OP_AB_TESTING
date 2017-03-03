@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+  <title>ADVENTURE YOU</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.css">
+</link>
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+</link>
+<link rel="stylesheet" href="css/style.css">
+</link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+</head>
+<header>
+  <div id="header">
+    <div class="container">
+      <div>
+        <div class="title">
+          <a href="/"><img class="adventureyou" src="images/ADVENTURE YOU.png"></a>
+        </div>
+        <div >
+          <nav>
+            <ul>
+              <div>
+                <li><a href="friend"><img class="nav-icon" src="images/Plus.png"></a></li>
+                <li><a class="active" href="/"><img class="nav-icon" src="images/Feed Icon.png"></a></li>
+                <li><a href="start_adventure"><img class="nav-icon" src="images/Mountain.png"></a></li>
+                <li><a href="bucket"><img class="nav-icon" src="images/Bucketlist Icon.png"></a></li>
+                <li><button class="hamburger">&#9776;</button>
+                </li>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div style="position: relative;">
+        <div class="menu">
+          <ul>
+            <a href="/logout">
+              <li>Log Out</li>
+            </a>
+            <a href="friend">
+              <li>Create an Adventure</li>
+            </a>
+            <a href="/">
+              <li>Newsfeed</li>
+            </a>
+            <a href="start_adventure">
+              <li>Start Adventuring</li>
+            </a>
+            <a href="bucket">
+              <li>Bucket List</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="index">
+  <body>
+    <div class="container">
+      <div>
+        {{#each feed_object}}
+        <div class="feed-box col-md-6 col-sm-12 col-xs-12">
+          <div>
+            <div class="monthDateContainer">
+              <div class="month">{{month}} </div>
+              <div class="date">{{date}} </div>
+            </div>
+            <div class="feed-info">
+              {{#each joinedList.peopleJoined}}
+              <img class="prof-pic" src="{{face}}">
+              {{/each}}
+            </div>
+          </div>
+          <div class="img-layout">
+            <img class="picture" src="{{feedPicture}}">
+            <div class="col-md-6 description">
+              <p id="description">{{description}}</p>
+              <p id="starting">Starting Location: <span id="startingLoc">{{startingLoc}}</span></p>
+              <p id="endingLoc">Ending Location: <span id="endingLoc">{{endingLoc}}</span></p>
+              <p>Theme: <span id="theme">{{theme}}</span></p>
+              <div>
+                <div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
+                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                <div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </body>
+</section>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+$('.bucket-button').click(function() {
+  var a = $(this).parent().parent().parent().children().attr('src');
+  var b = $(this).parent().parent().parent().parent().children().children().children('.month').text();
+  var c = $(this).parent().parent().parent().parent().children().children().children('.date').text();
+  var d = $(this).parent().parent().children('#description').text();
+  var e = $(this).parent().parent().children().children('#startingLoc').text();
+  var f = $(this).parent().parent().children().children('#endingLoc').text();
+  var g = $(this).parent().parent().children().children('#theme').text();
+
+  var z = b + c;
+  $.get("buckets", {picture: a, date: z, description: d, startingLoc: e, endingLoc: f, theme: g});
+});
+$('.img-layout').click(function() {
+  $(this).children(".description").toggle(500);
+  $(this).children(".picture").css('opacity', function(i,o) {
+    return parseFloat(o).toFixed(1) === '0.8' ? 1 : 0.8;
+  });
+});
+function addToBucket() {
+  swal({
+    title: "Added to bucket!",
+    // text: "Here's my error message!",
+    type: "success",
+    showCancelButton: true,
+    cancelButtonText: "Look at more Adventures",
+    confirmButtonText: "Head to the bucket page",
+    closeOnConfirm: false,
+    closeOnCancel: false
+  },
+  function(isConfirm) {
+    if(isConfirm) {
+      window.location.replace("bucket");
+    }else {
+      window.location.replace("/");
+    }
+  });
+}
+function comment() {
+  swal({
+    title: "Offer more Adventure Ideas!",
+    text: "Your idea:",
+    type: "input",
+    showCancelButton: true,
+    closeOnConfirm: false,
+    animation: "slide-from-top",
+    inputPlaceholder: "Idea"
+  },
+  function(inputValue){
+    if (inputValue === false) return false;
+    if (inputValue === "") {
+      swal.showInputError("You need to write something!");
+      return false
+    }
+    swal("Nice!", "Your friend will love your input.");
+  });
+}
+</script>
+</html>
