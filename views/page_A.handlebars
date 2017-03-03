@@ -79,7 +79,7 @@
           </div>
           <div class="img-layout">
             <img class="picture" src="{{feedPicture}}">
-            <div class="col-md-6 descriptionA">
+            <div class="col-md-6 description">
               <p id="description">{{description}}</p>
               <p id="starting">Starting Location: <span id="startingLoc">{{startingLoc}}</span></p>
               <p id="endingLoc">Ending Location: <span id="endingLoc">{{endingLoc}}</span></p>
@@ -112,12 +112,14 @@ $('.bucket-button').click(function() {
   var z = b + c;
   $.get("buckets", {picture: a, date: z, description: d, startingLoc: e, endingLoc: f, theme: g});
 });
+
 $('.img-layout').click(function() {
-  $(this).children(".descriptionA").toggle(500);
+  $(this).children(".description").toggle(500);
   $(this).children(".picture").css('opacity', function(i,o) {
     return parseFloat(o).toFixed(1) === '0.8' ? 1 : 0.8;
   });
 });
+
 function addToBucket() {
   swal({
     title: "Added to bucket!",

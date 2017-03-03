@@ -137,7 +137,6 @@ nav .active {
 
 .img-layout .description {
 	position: absolute;
-	padding-top: 20px;
 	top: 75px;
 	padding-right: 40px;
 	display: none;
@@ -146,16 +145,6 @@ nav .active {
 	height: 65%;
 }
 
-.img-layout .descriptionA {
-	position: absolute;
-	padding-top: 20px;
-	top: 75px;
-	padding-right: 40px;
-	display: none;
-	color:#fff;
-	width: 100%;
-	height: 65%;
-}
 
 @media screen and (max-width: 768px) {.img-layout .description {
 		font-size: 3vw !important;
@@ -635,6 +624,14 @@ nav .active {
 	max-width: 100%;
 	width: 738px;
 	position: relative;
+}
+.img-layout .picture {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	width: 720px;
+	position: relative;
+	color:black;
 }
 
 @media screen and (max-width: 768px)
