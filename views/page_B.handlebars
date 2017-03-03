@@ -65,8 +65,9 @@
     <div class="container">
       <div>
         {{#each feed_object}}
-        <div class="feed-box col-md-6 col-sm-12 col-xs-12">
-          <div>
+        <div class="feed-box col-md-6 col-sm-12 col-xs-12" >
+
+          <div style = "margin-bottom: 33px  !important;">
             <div class="monthDateContainer">
               <div class="month">{{month}} </div>
               <div class="date">{{date}} </div>
@@ -74,20 +75,23 @@
             <div class="feed-info">
               {{#each joinedList.peopleJoined}}
               <img class="prof-pic" src="{{face}}">
+              <p style="margin-bottom: 30px;">Choi Seun Sil is attending!</p>
               {{/each}}
             </div>
           </div>
-          <div class="img-layout">
-            <img class="picture" src="{{feedPicture}}">
-            <div class="col-md-6 description">
-              <p id="description">{{description}}</p>
-              <p id="starting">Starting Location: <span id="startingLoc">{{startingLoc}}</span></p>
-              <p id="endingLoc">Ending Location: <span id="endingLoc">{{endingLoc}}</span></p>
-              <p>Theme: <span id="theme">{{theme}}</span></p>
-              <div>
-                <div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png"></div>
-                <div class="col-md-2 col-sm-2 col-xs-2"></div>
-                <div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png"></div>
+          <div class="col-md-12 col-sm-12 col-xs-12 align-element">
+            <div class="container2">
+              <div class="popup-trigger"><span>Adventure!</span></div>
+              <div class="content2" style = " height: 270px !important;">
+                  <ul style="padding-left: 8px;">
+                    <p class="bucket_text">{{theme}}</p>
+                    <p id="description">{{description}}</p>
+                    <p id="starting">Starting Location: <span id="startingLoc">{{startingLoc}}</span></p>
+                    <p id="endingLoc">Ending Location: <span id="endingLoc">{{endingLoc}}</span></p>
+                    <p>Theme: <span id="theme">{{theme}}</span></p>
+                    <div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png" style = "max-width: 40% !important;"></div>
+                    <div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png" style = "max-width: 40% !important; margin-left: 95px !important;"></div>
+                  </ul>
               </div>
             </div>
           </div>
@@ -118,6 +122,36 @@ $('.img-layout').click(function() {
     return parseFloat(o).toFixed(1) === '0.8' ? 1 : 0.8;
   });
 });
+
+var scrollTop = '';
+var newHeight = '100';
+
+$(window).bind('scroll', function() {
+  scrollTop = $( window ).scrollTop();
+  newHeight = scrollTop + 100;
+});
+
+$(".popup-trigger").click(function () {
+    $header = $(this);
+    //getting the next element
+    $content = $header.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $content.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        $header.text(function () {
+            //change text based on condition
+            return $content.is(":visible") ? "Collapse" : "Adventure!";
+        });
+    });
+});
+
+$('html, .popup-btn-close').click(function(e) {
+  document.body.style.overflow = "visible";
+  $('.popup').hide();
+  $('.page-cover').detach();
+});
+
 function addToBucket() {
   swal({
     title: "Added to bucket!",
@@ -133,7 +167,7 @@ function addToBucket() {
     if(isConfirm) {
       window.location.replace("bucket");
     }else {
-      window.location.replace("/");
+      window.location.replace("/pageB");
     }
   });
 }

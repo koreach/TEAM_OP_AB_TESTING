@@ -2,7 +2,6 @@
  * Module dependencies.
  */
 var express = require('express');
-//var multer = require('multer');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
@@ -77,16 +76,13 @@ app.get('/feed', page_A.addToFeed);
 app.get('/bucket', bucket.view);
 app.get('/buckets', bucket.addToBucket);
 
-app.get('/friend', friend.view);
-//app.get('/map', map.view);
+app.get('/', friend.view);
 app.get('/adventure', adventure.view);
-//app.get('/share', share.view);
 app.get('/login', login.view);
 app.get('/createlogin', createlogin.view);
 
 app.get('/start_adventure', start_adventure.view);
 app.get('/adventures', start_adventure.addToAdventure);
-//app.get('/add', add.addAdventure);
 
 app.use(qt.static(__dirname + '/'));
 app.post('/upload', add.upload);
@@ -121,7 +117,7 @@ app.post("/createlogin", userExist, function (req, res) {
                     req.session.regenerate(function(){
                         req.session.user = user;
                         req.session.success = 'Authenticated as ' + user.username + ' click to <a href="/logout">logout</a>. ' + ' You may now access <a href="/restricted">/restricted</a>.';
-                        res.redirect('/');
+                        res.redirect('/page_B');
                     });
                 }
             });
@@ -135,7 +131,6 @@ app.post("/login", function (req, res) {
         if (user) {
 
             req.session.regenerate(function () {
-                //  console.log(user);
                 req.session.user = user;
                 req.session.success = 'Authenticated as ' + user.username + ' click to <a href="/logout">logout</a>. ' + ' You may now access <a href="/restricted">/restricted</a>.';
                 res.redirect('/page_B');
@@ -149,7 +144,7 @@ app.post("/login", function (req, res) {
 
 app.get('/logout', function (req, res) {
     req.session.destroy(function () {
-        res.redirect('/');
+        res.redirect('/page_B');
     });
 });
 
@@ -203,8 +198,6 @@ function userExist(req, res, next) {
     });
 }
 
-
-///////////////////////
 
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
