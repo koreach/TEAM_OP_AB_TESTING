@@ -10,5 +10,5 @@ $(".popup-trigger").click(function(e){
 });
 
 $(".img-layout").click(function(e){
-  ga("send", "event", 'picture', 'click');
+  ga("send", "event", 'show more', 'click');
 });
