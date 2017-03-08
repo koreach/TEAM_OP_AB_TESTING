@@ -1,12 +1,14 @@
+/**
 var data = require('../index.json');
 exports.view = function(req, res){
+  data['showAlternate'] = true;
   res.render('page_B', data);
 };
 
 var feed = require("../index.json");
 
 exports.view = function(req, res){
-
+data['showAlternate'] = true;
 if (req.session.user) {
     res.render('page_B',feed);
 } else {
@@ -23,6 +25,7 @@ exports.addToFeed = function(req, res) {
   				endingLoc: req.query.endingLoc,
   				theme: req.query.theme
   			};
+    data['showAlternate'] = true;
     res.render('page_B', feed);
     feed.feed_object.unshift(a);
 };

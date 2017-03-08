@@ -60,6 +60,7 @@
     </div>
   </div>
 </header>
+{{#if showAlternate}}
 <section id="index">
   <body>
     <div class="container">
@@ -97,6 +98,62 @@
     </div>
   </body>
 </section>
+{{else}}
+<section id="index">
+  <body>
+    <div class="container">
+      <div>
+        {{#each feed_object}}
+        <div class="feed-box col-md-6 col-sm-12 col-xs-12" >
+
+          <div style = "margin-bottom: 33px  !important;">
+            <div class="monthDateContainer">
+              <div class="month">{{month}} </div>
+              <div class="date">{{date}} </div>
+            </div>
+            <div class="feed-info">
+              {{#each joinedList.peopleJoined}}
+              <img class="prof-pic" src="{{face}}">
+              <p style="margin-bottom: 30px;">Choi Seun Sil is attending!</p>
+              {{/each}}
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 align-element">
+            <div class="container2">
+              <div class="popup-trigger"><span>Adventure!</span></div>
+              <div class="content2" style = " height: 270px !important;">
+                  <ul style="padding-left: 8px;">
+                    <p class="bucket_text">{{theme}}</p>
+                    <p id="description">{{description}}</p>
+                    <p id="starting">Starting Location: <span id="startingLoc">{{startingLoc}}</span></p>
+                    <p id="endingLoc">Ending Location: <span id="endingLoc">{{endingLoc}}</span></p>
+                    <p>Theme: <span id="theme">{{theme}}</span></p>
+                    <div onclick="comment()" class="add-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/plusicon2.png" style = "max-width: 40% !important;"></div>
+                    <div onclick="addToBucket()" class="bucket-button col-md-5 col-sm-5 col-xs-5"><img class="nav-icon" src="images/Bucketlist Icon.png" style = "max-width: 40% !important; margin-left: 95px !important;"></div>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </body>
+</section>
+{{/if}}
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93242528-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 <script src="js/bootstrap.js"></script>
 <script src="js/main.js"></script>
 <script type="text/javascript">
@@ -119,6 +176,30 @@ $('.img-layout').click(function() {
     return parseFloat(o).toFixed(1) === '0.8' ? 1 : 0.8;
   });
 });
+
+var scrollTop = '';
+var newHeight = '100';
+
+$(window).bind('scroll', function() {
+  scrollTop = $( window ).scrollTop();
+  newHeight = scrollTop + 100;
+});
+
+$(".popup-trigger").click(function () {
+    $header = $(this);
+    //getting the next element
+    $content = $header.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $content.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        $header.text(function () {
+            //change text based on condition
+            return $content.is(":visible") ? "Collapse" : "Adventure!";
+        });
+    });
+});
+
 
 function addToBucket() {
   swal({
